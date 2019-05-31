@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WEE-iV-KWx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aOR-T4-btD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,91 +11,105 @@
     </dependencies>
     <scenes>
         <!--Leagues-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="L52-Dt-dy0">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LeaguesController" customModule="Futbol_Source" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BzP-vF-L3V" customClass="LeaguesCollectionVC" customModule="Futbol_Source" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LGp-Vz-TBh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar clipsSubviews="YES" contentMode="redraw" fixedFrame="YES" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cA1-SW-2Ju" customClass="UISearchBarApperance" customModule="Futbol_Source" customModuleProvider="target">
+                            <searchBar clipsSubviews="YES" contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0df-at-6wT" customClass="UISearchBarApperance" customModule="Futbol_Source" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="K3z-ob-DgH">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-zX-zXg">
                                 <rect key="frame" x="0.0" y="56" width="375" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="leaguesViewCell" rowHeight="200" id="Gsz-rL-jaD" customClass="LeagueViewCell" customModule="Futbol_Source" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gsz-rL-jaD" id="KFP-Ku-lZb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rqw-Ph-BP1">
+                                    <size key="itemSize" width="163" height="156"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leaguesCell" id="psT-Dw-ew0" customClass="LeaguesCollectionViewCell" customModule="Futbol_Source" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="155" height="155"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burger0" translatesAutoresizingMaskIntoConstraints="NO" id="Lch-Lc-UeU">
-                                                    <rect key="frame" x="8" y="8" width="359" height="184"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aG-Un-PYc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OZK-qr-m4z">
-                                                    <rect key="frame" x="20" y="61" width="335" height="78"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="60"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-5y-kW2">
+                                                    <rect key="frame" x="0.0" y="125" width="155" height="30"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Lch-Lc-UeU" secondAttribute="bottom" constant="8" id="5NL-7C-mUe"/>
-                                                <constraint firstItem="OZK-qr-m4z" firstAttribute="centerY" secondItem="KFP-Ku-lZb" secondAttribute="centerY" id="SyW-4o-0ia"/>
-                                                <constraint firstItem="OZK-qr-m4z" firstAttribute="leading" secondItem="KFP-Ku-lZb" secondAttribute="leading" constant="20" id="mkP-qo-N2G"/>
-                                                <constraint firstAttribute="trailing" secondItem="Lch-Lc-UeU" secondAttribute="trailing" constant="8" id="nVg-7V-YVs"/>
-                                                <constraint firstItem="Lch-Lc-UeU" firstAttribute="top" secondItem="KFP-Ku-lZb" secondAttribute="top" constant="8" id="qLz-H9-MZE"/>
-                                                <constraint firstItem="Lch-Lc-UeU" firstAttribute="leading" secondItem="KFP-Ku-lZb" secondAttribute="leading" constant="8" id="wSf-Vd-ikN"/>
-                                                <constraint firstAttribute="trailing" secondItem="OZK-qr-m4z" secondAttribute="trailing" constant="20" id="xLF-7Q-8ZO"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eJe-5y-kW2" secondAttribute="trailing" id="3g5-fO-faJ"/>
+                                            <constraint firstItem="9aG-Un-PYc" firstAttribute="leading" secondItem="psT-Dw-ew0" secondAttribute="leading" id="6hf-W4-zCw"/>
+                                            <constraint firstItem="eJe-5y-kW2" firstAttribute="leading" secondItem="psT-Dw-ew0" secondAttribute="leading" id="Cld-2u-nRK"/>
+                                            <constraint firstAttribute="bottom" secondItem="9aG-Un-PYc" secondAttribute="bottom" id="Iwo-qt-XtG"/>
+                                            <constraint firstAttribute="trailing" secondItem="9aG-Un-PYc" secondAttribute="trailing" id="YMt-al-Y65"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJe-5y-kW2" secondAttribute="bottom" id="eSr-Y1-gah"/>
+                                            <constraint firstItem="9aG-Un-PYc" firstAttribute="top" secondItem="psT-Dw-ew0" secondAttribute="top" id="lma-Hs-Xpw"/>
+                                        </constraints>
+                                        <size key="customSize" width="155" height="155"/>
                                         <connections>
-                                            <outlet property="countryLeagueImg" destination="Lch-Lc-UeU" id="E9d-8N-2h9"/>
-                                            <outlet property="leagueNameTitle" destination="OZK-qr-m4z" id="yrx-f5-EfM"/>
+                                            <outlet property="leagueImage" destination="9aG-Un-PYc" id="Snp-4n-BXb"/>
+                                            <outlet property="leagueNameLabel" destination="eJe-5y-kW2" id="vJr-iJ-b0V"/>
                                         </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0df-at-6wT" firstAttribute="trailing" secondItem="WYE-HE-IGb" secondAttribute="trailing" id="1u0-Lg-1K6"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="trailing" secondItem="WYE-HE-IGb" secondAttribute="trailing" id="LDc-S2-ecB"/>
+                            <constraint firstItem="0df-at-6wT" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" id="McE-iq-hzy"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="bottom" secondItem="WYE-HE-IGb" secondAttribute="bottom" id="NxY-IN-yuN"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="top" secondItem="0df-at-6wT" secondAttribute="bottom" id="Nyx-Sa-Fn7"/>
+                            <constraint firstItem="0df-at-6wT" firstAttribute="top" secondItem="WYE-HE-IGb" secondAttribute="top" id="dlj-Zf-cQh"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" id="xFw-GG-ZGj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WYE-HE-IGb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Leagues" id="BEb-sg-1kj"/>
+                    <navigationItem key="navigationItem" title="Leagues" id="a6l-Ab-sW8"/>
                     <connections>
-                        <outlet property="tableView" destination="K3z-ob-DgH" id="mn9-ED-WnY"/>
+                        <outlet property="collectionView" destination="6E4-zX-zXg" id="f05-1R-x7G"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jc9-P6-zWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1077.5999999999999" y="98.50074962518741"/>
+            <point key="canvasLocation" x="3615.1999999999998" y="81.409295352323838"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="QxC-uf-NbF">
+        <scene sceneID="UVk-gW-dOQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WEE-iV-KWx" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aOR-T4-btD" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sOt-8P-DLJ" customClass="UINavigationBarAppearance" customModule="Futbol_Source" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Jg4-et-Yme">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Q4v-Fq-G7U"/>
+                        <segue destination="BzP-vF-L3V" kind="relationship" relationship="rootViewController" id="FfG-Tv-yl6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ffc-8v-XGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7sd-Bz-SE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.40000000000001" y="98.50074962518741"/>
+            <point key="canvasLocation" x="2676" y="80.50974512743629"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="burger0" width="1052" height="699"/>
-    </resources>
 </document>

@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA8697DB22A1DCDA00176317 /* LeaguesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DA22A1DCDA00176317 /* LeaguesCollectionVC.swift */; };
+		DA8697DD22A1DD8000176317 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */; };
 		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
 		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
-		DAB0C68C22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */; };
-		DAB0C68E22A105A900A3AF8D /* LeagueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68D22A105A900A3AF8D /* LeagueViewCell.swift */; };
 		DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69022A106CE00A3AF8D /* DataSet.swift */; };
 		DAB0C69322A107A000A3AF8D /* Leagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69222A107A000A3AF8D /* Leagues.swift */; };
 		DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42222A0DF4700F9489D /* AppDelegate.swift */; };
-		DACFD42522A0DF4700F9489D /* LeaguesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42422A0DF4700F9489D /* LeaguesController.swift */; };
 		DACFD42822A0DF4700F9489D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42622A0DF4700F9489D /* Main.storyboard */; };
 		DACFD42A22A0DF4800F9489D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42922A0DF4800F9489D /* Assets.xcassets */; };
 		DACFD42D22A0DF4800F9489D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42B22A0DF4800F9489D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA8697DA22A1DCDA00176317 /* LeaguesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionVC.swift; sourceTree = "<group>"; };
+		DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
-		DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarAppearance.swift; sourceTree = "<group>"; };
-		DAB0C68D22A105A900A3AF8D /* LeagueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueViewCell.swift; sourceTree = "<group>"; };
 		DAB0C69022A106CE00A3AF8D /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		DAB0C69222A107A000A3AF8D /* Leagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leagues.swift; sourceTree = "<group>"; };
 		DACFD41F22A0DF4700F9489D /* Futbol Source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futbol Source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFD42222A0DF4700F9489D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DACFD42422A0DF4700F9489D /* LeaguesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesController.swift; sourceTree = "<group>"; };
 		DACFD42722A0DF4700F9489D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DACFD42922A0DF4800F9489D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DACFD42C22A0DF4800F9489D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +55,7 @@
 		DAB0C68322A0E2B400A3AF8D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DAB0C68D22A105A900A3AF8D /* LeagueViewCell.swift */,
+				DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -65,7 +63,7 @@
 		DAB0C68422A0E2BA00A3AF8D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DACFD42422A0DF4700F9489D /* LeaguesController.swift */,
+				DA8697DA22A1DCDA00176317 /* LeaguesCollectionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -83,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */,
-				DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -201,11 +198,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB0C68C22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift in Sources */,
 				DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */,
+				DA8697DB22A1DCDA00176317 /* LeaguesCollectionVC.swift in Sources */,
 				DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */,
-				DAB0C68E22A105A900A3AF8D /* LeagueViewCell.swift in Sources */,
-				DACFD42522A0DF4700F9489D /* LeaguesController.swift in Sources */,
+				DA8697DD22A1DD8000176317 /* LeaguesCollectionViewCell.swift in Sources */,
 				DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */,
 				DAB0C69322A107A000A3AF8D /* Leagues.swift in Sources */,
 				DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */,
