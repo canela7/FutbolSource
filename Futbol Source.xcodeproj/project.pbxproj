@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
+		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
+		DAB0C68C22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */; };
 		DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42222A0DF4700F9489D /* AppDelegate.swift */; };
 		DACFD42522A0DF4700F9489D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42422A0DF4700F9489D /* ViewController.swift */; };
 		DACFD42822A0DF4700F9489D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42622A0DF4700F9489D /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
+		DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBarAppearance.swift; sourceTree = "<group>"; };
 		DACFD41F22A0DF4700F9489D /* Futbol Source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futbol Source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFD42222A0DF4700F9489D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACFD42422A0DF4700F9489D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAB0C68222A0E2AE00A3AF8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DAB0C68322A0E2B400A3AF8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAB0C68422A0E2BA00A3AF8D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DAB0C68522A0E79600A3AF8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DAB0C68822A0E9C800A3AF8D /* UIExtensions */,
+				DAB0C68622A0E7A500A3AF8D /* Theme.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DAB0C68822A0E9C800A3AF8D /* UIExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */,
+				DAB0C68B22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift */,
+			);
+			path = UIExtensions;
+			sourceTree = "<group>";
+		};
 		DACFD41622A0DF4700F9489D = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +99,10 @@
 		DACFD42122A0DF4700F9489D /* Futbol Source */ = {
 			isa = PBXGroup;
 			children = (
+				DAB0C68522A0E79600A3AF8D /* Resources */,
+				DAB0C68222A0E2AE00A3AF8D /* Model */,
+				DAB0C68322A0E2B400A3AF8D /* View */,
+				DAB0C68422A0E2BA00A3AF8D /* Controller */,
 				DACFD42222A0DF4700F9489D /* AppDelegate.swift */,
 				DACFD42422A0DF4700F9489D /* ViewController.swift */,
 				DACFD42622A0DF4700F9489D /* Main.storyboard */,
@@ -135,6 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAB0C68C22A0EBDA00A3AF8D /* UINavigationBarAppearance.swift in Sources */,
+				DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */,
+				DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */,
 				DACFD42522A0DF4700F9489D /* ViewController.swift in Sources */,
 				DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */,
 			);
