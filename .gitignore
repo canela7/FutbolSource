@@ -1,5 +1,6 @@
 .DS_Store
-API_Endpoints.swift
+
+
 
 
 ## Various settings
@@ -13,3 +14,5 @@ API_Endpoints.swift
 !default.perspectivev3
 xcuserdata/
 
+
+/Data/
