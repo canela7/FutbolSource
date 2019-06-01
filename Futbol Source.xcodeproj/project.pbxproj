@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DA8697DB22A1DCDA00176317 /* LeaguesCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DA22A1DCDA00176317 /* LeaguesCollectionVC.swift */; };
 		DA8697DD22A1DD8000176317 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */; };
+		DA8697E122A1F7BD00176317 /* API_Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E022A1F7BD00176317 /* API_Endpoints.swift */; };
+		DA8697E422A1F9DE00176317 /* LeagueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E322A1F9DE00176317 /* LeagueAPI.swift */; };
 		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
 		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
 		DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69022A106CE00A3AF8D /* DataSet.swift */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		DA8697DA22A1DCDA00176317 /* LeaguesCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionVC.swift; sourceTree = "<group>"; };
 		DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA8697E022A1F7BD00176317 /* API_Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Endpoints.swift; sourceTree = "<group>"; };
+		DA8697E322A1F9DE00176317 /* LeagueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAPI.swift; sourceTree = "<group>"; };
 		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
 		DAB0C69022A106CE00A3AF8D /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA8697E222A1F9B800176317 /* API_CALLS */ = {
+			isa = PBXGroup;
+			children = (
+				DA8697E322A1F9DE00176317 /* LeagueAPI.swift */,
+			);
+			path = API_CALLS;
+			sourceTree = "<group>";
+		};
 		DAB0C68222A0E2AE00A3AF8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 			children = (
 				DAB0C69022A106CE00A3AF8D /* DataSet.swift */,
 				DAB0C69222A107A000A3AF8D /* Leagues.swift */,
+				DA8697E022A1F7BD00176317 /* API_Endpoints.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -113,6 +126,7 @@
 		DACFD42122A0DF4700F9489D /* Futbol Source */ = {
 			isa = PBXGroup;
 			children = (
+				DA8697E222A1F9B800176317 /* API_CALLS */,
 				DAB0C68F22A106BB00A3AF8D /* Data */,
 				DAB0C68522A0E79600A3AF8D /* Resources */,
 				DAB0C68222A0E2AE00A3AF8D /* Model */,
@@ -198,9 +212,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8697E422A1F9DE00176317 /* LeagueAPI.swift in Sources */,
 				DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */,
 				DA8697DB22A1DCDA00176317 /* LeaguesCollectionVC.swift in Sources */,
 				DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */,
+				DA8697E122A1F7BD00176317 /* API_Endpoints.swift in Sources */,
 				DA8697DD22A1DD8000176317 /* LeaguesCollectionViewCell.swift in Sources */,
 				DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */,
 				DAB0C69322A107A000A3AF8D /* Leagues.swift in Sources */,

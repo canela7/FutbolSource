@@ -16,11 +16,15 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     let data = DataSet()
     
+    var leagueAPI = LeagueAPI()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        
+        leagueAPI.getLeagueURLSession()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
