@@ -16,7 +16,7 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     let data = DataSet()
     
-    var leagueAPI = LeagueAPI(LeagueRequest(id: "2"))
+    var leagueAPI = LeagueAPI()
     
     override func viewDidLoad() {
         super.viewDidLoad()

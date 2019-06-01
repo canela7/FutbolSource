@@ -12,12 +12,6 @@ import SwiftyJSON
 
 class LeagueAPI {
     
-    var leagueRequest: LeagueRequest
-    
-    init(_ leagueRequest: LeagueRequest) {
-        self.leagueRequest = leagueRequest
-    }
-
     func getLeagueAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
         
         guard let url = URL(string: "\(LEAGUE_URL)\(id)") else {
@@ -25,11 +19,9 @@ class LeagueAPI {
             return
         }
         
-        let parameters = leagueRequest.toParameters()
-        let headers = leagueRequest.getHeaders()
+        let parameters: Parameters = ["id": id.description]
         
-        
-        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+        Alamofire.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: HEADERS).responseJSON { (response) in
             if let error = response.result.error {
                 debugPrint(error.localizedDescription)
                 completion(nil)
