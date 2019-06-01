@@ -12,7 +12,10 @@ import Alamofire
 
 
 let LEGAUES_URL_ENDPOINT = "https://api-football-v1.p.rapidapi.com/v2/leagues"
+let LEGAUE_TEAM_URL_ENDPOINT = "https://api-football-v1.p.rapidapi.com/v2/teams"
+
 let LEAGUE_URL = LEGAUES_URL_ENDPOINT + "/league/"
+let TEAMS_LEAGUE_URL = LEGAUE_TEAM_URL_ENDPOINT + "/league/"
 
 let API_KEY = "ca2e146046msh8dc312516e7956ep17b4aejsndee61613b763"
 let X_RapidAPI_Host = "api-football-v1.p.rapidapi.com"
@@ -23,5 +26,5 @@ let HEADERS: HTTPHeaders = [
 ]
 
 
-typealias LeaguesResponseCompletion = (Leagues?) -> Void
+typealias LeaguesResponseCompletion = ([Leagues]?) -> Void
 

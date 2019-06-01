@@ -12,9 +12,11 @@ import SwiftyJSON
 
 class LeagueAPI {
     
+    var teams = [Leagues]()
+    
     func getLeagueAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
         
-        guard let url = URL(string: "\(LEAGUE_URL)\(id)") else {
+        guard let url = URL(string: "\(TEAMS_LEAGUE_URL)\(id)") else {
             print("Error getting LEAGUE_URL. FILE: LEAGUE_API")
             return
         }
@@ -28,11 +30,11 @@ class LeagueAPI {
                 return
             }
             
-            guard let data = response.data else { return completion(nil) }
+            guard let data = response.data else { return completion(nil)}
      
             do {
                 let json = try JSON(data: data)
-                print("Completed: ", json)
+               // print("Completed: ", json)
                 let person = self.parseLeaguesSwifty(json: json)
                 completion(person)
             }catch{
@@ -44,18 +46,23 @@ class LeagueAPI {
     
     
     //parsing with Swifty Json
-    private func parseLeaguesSwifty(json: JSON) -> Leagues {
+    private func parseLeaguesSwifty(json: JSON) -> [Leagues] {
         //our api input is dictionary of key type string and value of any
-        //as? String b/c we have value returned in strings
-        let leagueName = json["api"].stringValue
-        let leagueLogoImage = json["logo"].stringValue
         
-        print("LeagueName: \(leagueName)")
-        print("LeagueName: \(leagueLogoImage)")
+        for teamName in json["api"]["teams"].arrayValue {
+            
+//            teamNames.append(teamName["name"].stringValue)
+            
+            let leagueTeamName = teamName["name"].stringValue
+            
+            let team = Leagues(title: leagueTeamName, imageName: "burger0")
+            
+            teams.append(team)
+        }
+                
+        //let team = Leagues(title: "N/A", imageName: "burger0")
         
-        let leagues = Leagues(title: leagueName, imageName: leagueLogoImage)
-        
-        return leagues
+        return teams
     }
     
 }
