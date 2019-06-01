@@ -34,9 +34,16 @@ class LeagueAPI {
      
             do {
                 let json = try JSON(data: data)
-               // print("Completed: ", json)
                 let person = self.parseLeaguesSwifty(json: json)
-                completion(person)
+                
+                DispatchQueue.global(qos: .userInteractive).async {
+                    DispatchQueue.main.async {
+                        //return the trip to the main thread
+                        completion(person)
+                    }
+                }
+                
+                //completion(person)
             }catch{
                 debugPrint(error.localizedDescription)
             }
@@ -50,8 +57,6 @@ class LeagueAPI {
         //our api input is dictionary of key type string and value of any
         
         for teamName in json["api"]["teams"].arrayValue {
-            
-//            teamNames.append(teamName["name"].stringValue)
             
             let leagueTeamName = teamName["name"].stringValue
             

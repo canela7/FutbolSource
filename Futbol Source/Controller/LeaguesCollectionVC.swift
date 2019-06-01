@@ -16,7 +16,9 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     let data = DataSet()
     
-    var leagueAPI = LeagueAPI()
+    let leagueAPI = LeagueAPI()
+    
+    var teamsNames = [Leagues]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,30 +28,48 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
-        getRandomLeagues()
+        getTeamsName()
        
     }
     
-    func getRandomLeagues() {
+    func getTeamsName() {
         for id in 2..<3 {
             leagueAPI.getLeagueAlamoFire(id: id) { (league) in
-                if let leagues = league {
-                    leagues.forEach({ (league) in
-                        print(league.title)
-                        //print(league.imageName)
-                    })
+                
+                self.collectionView.reloadData()
+                
+                if self.leagueAPI.teams.count > 0 {
+                    if let leagues = league {
+                        leagues.forEach({ (league) in
+                            //print(league.title)
+                            //print(league.imageName)
+                        })
+                    }
                 }
+                
+//                if let leagues = league {
+//                    leagues.forEach({ (league) in
+//                        print(league.title)
+//                        print(league.imageName)
+//                    })
+//                }
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.categories.count;
+        print("INSIDE FILE: LEAGUECOLLECTIONVC: ", leagueAPI.teams.count)
+        if leagueAPI.teams.count > 0 {
+             print("first index of teams:, ", leagueAPI.teams[0])
+        }
+
+        //return data.categories.count;
+        return leagueAPI.teams.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? LeaguesCollectionViewCell {
-            cell.configureCell(league: data.categories[indexPath.row])
+            cell.configureCell(league: leagueAPI.teams[indexPath.row])
             return cell
         }
         
@@ -60,7 +80,7 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         
         let width = view.bounds.width
         let cellDimension = (width / 2) - 15 //15 is the spacing between the collection view cells
-        print(width, cellDimension)
+        //print(width, cellDimension)
         return CGSize(width: cellDimension, height: cellDimension)
     }
     
