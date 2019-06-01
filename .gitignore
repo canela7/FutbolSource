@@ -1,6 +1,6 @@
 .DS_Store
 
-
+*.txt
 
 ## Various settings
 *.pbxuser
@@ -13,4 +13,3 @@
 !default.perspectivev3
 xcuserdata/
 
-hello.txt
