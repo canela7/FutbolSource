@@ -24,7 +24,11 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         
+        ///step 1: make network request
         leagueAPI.getLeagueURLSession()
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

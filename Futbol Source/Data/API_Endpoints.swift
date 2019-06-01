@@ -11,3 +11,5 @@ import UIKit
 
 let LEGAUES_URL_ENDPOINT = "https://api-football-v1.p.rapidapi.com/v2/leagues"
 let LEAGUE_URL = LEGAUES_URL_ENDPOINT + "/league/2"
+
+

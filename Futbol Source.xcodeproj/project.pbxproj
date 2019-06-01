@@ -60,6 +60,7 @@
 		DAB0C68222A0E2AE00A3AF8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DAB0C69222A107A000A3AF8D /* Leagues.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				DAB0C69022A106CE00A3AF8D /* DataSet.swift */,
-				DAB0C69222A107A000A3AF8D /* Leagues.swift */,
 				DA8697E022A1F7BD00176317 /* API_Endpoints.swift */,
 			);
 			path = Data;

@@ -9,6 +9,8 @@
 import Foundation
 
 struct Leagues {
+    //dont forget to add the id
+    //let league_id: String
     let title: String
     let imageName: String
 }
