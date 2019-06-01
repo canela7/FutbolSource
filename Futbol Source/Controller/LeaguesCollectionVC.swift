@@ -24,11 +24,21 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         collectionView.dataSource = self
         collectionView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         
-        ///step 1: make network request
-        leagueAPI.getLeagueURLSession()
+        ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
-        
-        
+        getRandomLeagues()
+       
+    }
+    
+    func getRandomLeagues() {
+        for id in 2..<3 {
+            leagueAPI.getLeagueURLSession(id: id) { (leagues) in
+                if let leagues = leagues {
+                    print(leagues.title)
+                    print(leagues.imageName)
+                }
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

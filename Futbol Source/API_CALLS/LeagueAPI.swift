@@ -15,12 +15,13 @@ private let HEADERS = [
 
 class LeagueAPI {
     
-    func getLeagueURLSession()  {
+    //LeaguesResponseCompletion is a typealias of Leagues? -> Void
+    
+    func getLeagueURLSession(id: Int, completion: @escaping LeaguesResponseCompletion)  {
         
-        guard let url = URL(string: LEGAUES_URL_ENDPOINT) else {
+        guard let url = URL(string: "\(LEAGUE_URL)\(id)") else {
             print("Error getting LEAGUE_URL. FILE: LEAGUE_API")
             return
-
         }
         
         //network request
@@ -28,6 +29,9 @@ class LeagueAPI {
            
             guard error == nil else{
                 debugPrint(error.debugDescription)
+                
+                completion(nil)
+                
                 return
             }
             
@@ -41,8 +45,13 @@ class LeagueAPI {
                 
                 print("FILE: LEAGUE-API:", json)
                 let leagues = self.parseLeaguesManual(json: json)
-            
-                
+        
+                //back in the main thread
+                DispatchQueue.main.async {
+                    completion(leagues)
+                }
+        
+        
                 print("FILE: LEAGUE-API: ", leagues.title)
                 print("FILEL LEAGUE-API:", leagues.imageName)
 
@@ -51,7 +60,7 @@ class LeagueAPI {
                 return
             }
             //print("League Data = \(data)")
-            //print("Response = \(response)")
+            print("Response = \(response)")
         }
         task.resume()
     }
