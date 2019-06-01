@@ -1,4 +1,6 @@
 .DS_Store
+API_Endpoints.swift
+
 
 ## Various settings
 *.pbxuser
@@ -11,5 +13,3 @@
 !default.perspectivev3
 xcuserdata/
 
-
-API_Endpoints.swift
