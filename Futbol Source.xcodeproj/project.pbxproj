@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		DA8697DD22A1DD8000176317 /* LeaguesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */; };
 		DA8697E122A1F7BD00176317 /* API_Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E022A1F7BD00176317 /* API_Endpoints.swift */; };
 		DA8697E422A1F9DE00176317 /* LeagueAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E322A1F9DE00176317 /* LeagueAPI.swift */; };
+		DA8697E822A22D7000176317 /* LeagueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E722A22D7000176317 /* LeagueRequest.swift */; };
 		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
 		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
 		DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69022A106CE00A3AF8D /* DataSet.swift */; };
@@ -29,6 +30,7 @@
 		DA8697DC22A1DD8000176317 /* LeaguesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA8697E022A1F7BD00176317 /* API_Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_Endpoints.swift; sourceTree = "<group>"; };
 		DA8697E322A1F9DE00176317 /* LeagueAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAPI.swift; sourceTree = "<group>"; };
+		DA8697E722A22D7000176317 /* LeagueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRequest.swift; sourceTree = "<group>"; };
 		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
 		DAB0C69022A106CE00A3AF8D /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				DA8697E322A1F9DE00176317 /* LeagueAPI.swift */,
+				DA8697E722A22D7000176317 /* LeagueRequest.swift */,
 			);
 			path = API_CALLS;
 			sourceTree = "<group>";
@@ -162,7 +165,6 @@
 				DCBE0D9550806CFF816EC409 /* Pods-Futbol Source.debug.xcconfig */,
 				77908679D61AE604442B8F09 /* Pods-Futbol Source.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -282,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA8697E422A1F9DE00176317 /* LeagueAPI.swift in Sources */,
+				DA8697E822A22D7000176317 /* LeagueRequest.swift in Sources */,
 				DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */,
 				DA8697DB22A1DCDA00176317 /* LeaguesCollectionVC.swift in Sources */,
 				DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */,

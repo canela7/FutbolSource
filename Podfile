@@ -7,7 +7,7 @@ target 'Futbol Source' do
 
   # Pods for Futbol Source
 
-  pod 'Alamofire', '~> 5.0.0-beta.5'
+  pod 'Alamofire', '~> 4.7.3'
   pod 'SwiftyJSON', '~> 4.0'
 
 end

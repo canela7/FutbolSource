@@ -8,9 +8,13 @@
 
 import Foundation
 import UIKit
+import Alamofire
+
 
 let LEGAUES_URL_ENDPOINT = "https://api-football-v1.p.rapidapi.com/v2/leagues"
 let LEAGUE_URL = LEGAUES_URL_ENDPOINT + "/league/"
 
+let API_KEY = "ca2e146046msh8dc312516e7956ep17b4aejsndee61613b763"
 
 typealias LeaguesResponseCompletion = (Leagues?) -> Void
+

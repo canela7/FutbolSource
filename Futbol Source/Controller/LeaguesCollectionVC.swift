@@ -16,7 +16,7 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     let data = DataSet()
     
-    var leagueAPI = LeagueAPI()
+    var leagueAPI = LeagueAPI(LeagueRequest(id: "2"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +32,14 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     func getRandomLeagues() {
         for id in 2..<3 {
-            leagueAPI.getLeagueURLSession(id: id) { (leagues) in
-                if let leagues = leagues {
+//            leagueAPI.getLeagueURLSession(id: id) { (leagues) in
+//                if let leagues = leagues {
+//                    print(leagues.title)
+//                    print(leagues.imageName)
+//                }
+//            }
+            leagueAPI.getLeagueAlamoFire(id: id) { (league) in
+                if let leagues = league {
                     print(leagues.title)
                     print(leagues.imageName)
                 }

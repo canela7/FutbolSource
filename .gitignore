@@ -10,3 +10,6 @@
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+
+
+API_Endpoints.swift
