@@ -18,7 +18,6 @@ class TeamsCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         leagueImage.layer.cornerRadius =  CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)))
-        
         leagueNameLabel.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         
     }

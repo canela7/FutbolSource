@@ -8,7 +8,7 @@
 //
 import UIKit
 
-private let reuseIdentifier = "leaguesCell"
+private let reuseIdentifier = "teamsCell"
 
 class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
     
