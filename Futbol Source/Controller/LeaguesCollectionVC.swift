@@ -18,13 +18,17 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     let leagueAPI = LeagueAPI()
     
-    var teamsNames = [Leagues]()
+    //let teamsIDLeague = [2,4]
+    
+    //var teamsNames = [Leagues]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        
+        navigationItem.title = "Teams";
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
@@ -34,15 +38,19 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     func getTeamsName() {
         for id in 2..<3 {
-            leagueAPI.getLeagueAlamoFire(id: id) { (league) in
+            leagueAPI.getLeagueAlamoFire(id: id) { (teams) in
                 
-                self.collectionView.reloadData()
+                //self.collectionView.reloadData()
                 
                 if self.leagueAPI.teams.count > 0 {
-                    if let leagues = league {
-                        leagues.forEach({ (league) in
-                            //print(league.title)
-                            //print(league.imageName)
+                    
+                    print("Teams: ", teams ?? "")
+                    self.collectionView.reloadData()
+
+                    if let teams = teams {
+                        teams.forEach({ (team) in
+                            print("Team Name:", team.title)
+                            print("Team Image Logo Data:", team.imageName)
                         })
                     }
                 }
@@ -59,9 +67,10 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("INSIDE FILE: LEAGUECOLLECTIONVC: ", leagueAPI.teams.count)
-        if leagueAPI.teams.count > 0 {
-             print("first index of teams:, ", leagueAPI.teams[0])
-        }
+        
+//        if leagueAPI.teams.count > 0 {
+//             print("first index of teams:, ", leagueAPI.teams[0])
+//        }
 
         //return data.categories.count;
         return leagueAPI.teams.count;
@@ -70,6 +79,7 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? LeaguesCollectionViewCell {
             cell.configureCell(league: leagueAPI.teams[indexPath.row])
+            //cell.configureCell(league: data.categories[indexPath.row])
             return cell
         }
         

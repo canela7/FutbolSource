@@ -13,4 +13,6 @@ struct Leagues {
     //let league_id: String
     let title: String
     let imageName: String
+    
+    
 }

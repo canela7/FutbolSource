@@ -33,34 +33,34 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leaguesCell" id="psT-Dw-ew0" customClass="LeaguesCollectionViewCell" customModule="Futbol_Source" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="10" width="155" height="155"/>
+                                        <rect key="frame" x="10" y="10" width="170" height="170"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aG-Un-PYc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="170" height="145"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-5y-kW2">
-                                                    <rect key="frame" x="0.0" y="125" width="155" height="30"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                                <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJe-5y-kW2">
+                                                    <rect key="frame" x="0.0" y="145" width="170" height="25"/>
+                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="eJe-5y-kW2" secondAttribute="trailing" id="3g5-fO-faJ"/>
+                                            <constraint firstItem="eJe-5y-kW2" firstAttribute="leading" secondItem="psT-Dw-ew0" secondAttribute="leading" id="58F-ib-xe8"/>
                                             <constraint firstItem="9aG-Un-PYc" firstAttribute="leading" secondItem="psT-Dw-ew0" secondAttribute="leading" id="6hf-W4-zCw"/>
-                                            <constraint firstItem="eJe-5y-kW2" firstAttribute="leading" secondItem="psT-Dw-ew0" secondAttribute="leading" id="Cld-2u-nRK"/>
-                                            <constraint firstAttribute="bottom" secondItem="9aG-Un-PYc" secondAttribute="bottom" id="Iwo-qt-XtG"/>
+                                            <constraint firstAttribute="trailing" secondItem="eJe-5y-kW2" secondAttribute="trailing" id="Nu4-5B-hsb"/>
                                             <constraint firstAttribute="trailing" secondItem="9aG-Un-PYc" secondAttribute="trailing" id="YMt-al-Y65"/>
-                                            <constraint firstAttribute="bottom" secondItem="eJe-5y-kW2" secondAttribute="bottom" id="eSr-Y1-gah"/>
+                                            <constraint firstItem="eJe-5y-kW2" firstAttribute="top" secondItem="9aG-Un-PYc" secondAttribute="bottom" id="YZJ-TF-sQS"/>
+                                            <constraint firstAttribute="bottom" secondItem="eJe-5y-kW2" secondAttribute="bottom" id="kS3-Km-KtW"/>
                                             <constraint firstItem="9aG-Un-PYc" firstAttribute="top" secondItem="psT-Dw-ew0" secondAttribute="top" id="lma-Hs-Xpw"/>
                                         </constraints>
-                                        <size key="customSize" width="155" height="155"/>
+                                        <size key="customSize" width="170" height="170"/>
                                         <connections>
                                             <outlet property="leagueImage" destination="9aG-Un-PYc" id="Snp-4n-BXb"/>
                                             <outlet property="leagueNameLabel" destination="eJe-5y-kW2" id="vJr-iJ-b0V"/>

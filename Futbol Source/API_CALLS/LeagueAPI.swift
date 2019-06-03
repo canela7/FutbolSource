@@ -60,7 +60,9 @@ class LeagueAPI {
             
             let leagueTeamName = teamName["name"].stringValue
             
-            let team = Leagues(title: leagueTeamName, imageName: "burger0")
+            let leagueImageData = teamName["logo"].stringValue
+            
+            let team = Leagues(title: leagueTeamName, imageName: leagueImageData)
             
             teams.append(team)
         }
