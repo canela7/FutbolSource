@@ -5,7 +5,7 @@
 //  Created by Brian Canela on 5/31/19.
 //  Copyright © 2019 Brian Canela. All rights reserved.
 //
-
+//
 import UIKit
 
 private let reuseIdentifier = "leaguesCell"
