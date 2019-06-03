@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class LeagueAPI {
+class TeamsAPI {
     
     var teams = [Leagues]()
     
-    func getLeagueAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
+    func getTeamAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
         
         guard let url = URL(string: "\(TEAMS_LEAGUE_URL)\(id)") else {
             print("Error getting LEAGUE_URL. FILE: LEAGUE_API")

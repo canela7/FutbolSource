@@ -5,19 +5,20 @@
 //  Created by Brian Canela on 5/31/19.
 //  Copyright © 2019 Brian Canela. All rights reserved.
 //
-
+//
 import UIKit
 
 private let reuseIdentifier = "leaguesCell"
 
-class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let data = DataSet()
     
-    let leagueAPI = LeagueAPI()
-    let leagues = LeaguesCollectionViewCell()
+    let teamsAPI = TeamsAPI()
+    let leagues = TeamsCollectionViewCell()
     let teamsIDLeague = [2,4]
     
     //var teamsNames = [Leagues]()
@@ -33,21 +34,21 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
         getTeamsName()
-       
+        
     }
     
     func getTeamsName() {
         for id in teamsIDLeague {
             
-            leagueAPI.getLeagueAlamoFire(id: id) { (teams) in
+            teamsAPI.getTeamAlamoFire(id: id) { (teams) in
                 
                 //self.collectionView.reloadData()
                 
-                if self.leagueAPI.teams.count > 0 {
+                if self.teamsAPI.teams.count > 0 {
                     
                     print("Teams: ", teams ?? "")
                     self.collectionView.reloadData()
-    
+                    
                     if let teams = teams {
                         teams.forEach({ (team) in
                             print("Team Name:", team.title)
@@ -60,15 +61,15 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("INSIDE FILE: LEAGUECOLLECTIONVC: ", leagueAPI.teams.count)
+        print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
         
         //return data.categories.count;
-        return leagueAPI.teams.count;
+        return teamsAPI.teams.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? LeaguesCollectionViewCell {
-            cell.configureCell(league: leagueAPI.teams[indexPath.row])
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TeamsCollectionViewCell {
+            cell.configureCell(league: teamsAPI.teams[indexPath.row])
             //cell.configureCell(league: data.categories[indexPath.row])
             return cell
         }
@@ -84,5 +85,5 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
         return CGSize(width: cellDimension, height: cellDimension)
     }
     
-
+    
 }

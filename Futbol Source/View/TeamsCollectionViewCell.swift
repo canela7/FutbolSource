@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LeaguesCollectionViewCell: UICollectionViewCell {
+class TeamsCollectionViewCell: UICollectionViewCell {
     
     
     @IBOutlet weak var leagueImage: UIImageView!
