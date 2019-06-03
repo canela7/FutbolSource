@@ -11,6 +11,7 @@ import Foundation
 struct Leagues {
     //dont forget to add the id
     //let league_id: String
+    //new set up!
     let title: String
     let imageName: String
     
