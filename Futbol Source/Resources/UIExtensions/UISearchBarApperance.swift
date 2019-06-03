@@ -14,6 +14,9 @@ class UISearchBarApperance: UISearchBar {
         super.init(coder: aDecoder)
         barTintColor = Theme.navBarColor
         isTranslucent = false
+        placeholder = "Search for a Team"
+        searchBarStyle = .minimal
+        backgroundColor = Theme.navBarColor.withAlphaComponent(0.95)
     }
 
 

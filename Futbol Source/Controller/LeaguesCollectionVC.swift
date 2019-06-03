@@ -17,8 +17,8 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     let data = DataSet()
     
     let leagueAPI = LeagueAPI()
-    
-    //let teamsIDLeague = [2,4]
+    let leagues = LeaguesCollectionViewCell()
+    let teamsIDLeague = [2,4]
     
     //var teamsNames = [Leagues]()
     
@@ -37,7 +37,8 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func getTeamsName() {
-        for id in 2..<3 {
+        for id in teamsIDLeague {
+            
             leagueAPI.getLeagueAlamoFire(id: id) { (teams) in
                 
                 //self.collectionView.reloadData()
@@ -46,7 +47,7 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
                     
                     print("Teams: ", teams ?? "")
                     self.collectionView.reloadData()
-
+    
                     if let teams = teams {
                         teams.forEach({ (team) in
                             print("Team Name:", team.title)
@@ -54,13 +55,6 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
                         })
                     }
                 }
-                
-//                if let leagues = league {
-//                    leagues.forEach({ (league) in
-//                        print(league.title)
-//                        print(league.imageName)
-//                    })
-//                }
             }
         }
     }
@@ -68,10 +62,6 @@ class LeaguesCollectionVC: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("INSIDE FILE: LEAGUECOLLECTIONVC: ", leagueAPI.teams.count)
         
-//        if leagueAPI.teams.count > 0 {
-//             print("first index of teams:, ", leagueAPI.teams[0])
-//        }
-
         //return data.categories.count;
         return leagueAPI.teams.count;
     }

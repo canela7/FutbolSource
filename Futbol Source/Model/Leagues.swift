@@ -14,5 +14,4 @@ struct Leagues {
     let title: String
     let imageName: String
     
-    
 }

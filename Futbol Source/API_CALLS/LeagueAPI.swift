@@ -38,6 +38,7 @@ class LeagueAPI {
                 
                 DispatchQueue.global(qos: .userInteractive).async {
                     DispatchQueue.main.async {
+                        
                         //return the trip to the main thread
                         completion(person)
                     }
