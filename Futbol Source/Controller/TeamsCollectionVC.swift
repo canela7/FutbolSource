@@ -11,13 +11,13 @@ import UIKit
 private let reuseIdentifier = "leaguesCell"
 
 class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
     
     let data = DataSet()
     
     let teamsAPI = TeamsAPI()
-    
     let leagues = TeamsCollectionViewCell()
     let teamsIDLeague = [2,4]
     
@@ -32,17 +32,23 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         navigationItem.title = "Teams";
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
+        
         getTeamsName()
+        
     }
     
     func getTeamsName() {
         for id in teamsIDLeague {
+            
             teamsAPI.getTeamAlamoFire(id: id) { (teams) in
+                
+                //self.collectionView.reloadData()
+                
                 if self.teamsAPI.teams.count > 0 {
                     
                     print("Teams: ", teams ?? "")
                     self.collectionView.reloadData()
-    
+                    
                     if let teams = teams {
                         teams.forEach({ (team) in
                             print("Team Name:", team.title)
@@ -56,6 +62,8 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
+        
+        //return data.categories.count;
         return teamsAPI.teams.count;
     }
     
@@ -77,5 +85,5 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         return CGSize(width: cellDimension, height: cellDimension)
     }
     
-
+    
 }
