@@ -8,7 +8,7 @@
 //
 import UIKit
 
-private let reuseIdentifier = "leaguesCell"
+private let reuseIdentifier = "teamsCell"
 
 class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
     
@@ -33,7 +33,7 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
-        getTeamsName()
+       // getTeamsName()
         
     }
     
