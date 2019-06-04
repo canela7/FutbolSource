@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class TeamsAPI {
     
-    var teams = [Leagues]()
+    var teams = [Teams]()
     
     func getTeamAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
         
@@ -54,7 +54,7 @@ class TeamsAPI {
     
     
     //parsing with Swifty Json
-    private func parseLeaguesSwifty(json: JSON) -> [Leagues] {
+    private func parseLeaguesSwifty(json: JSON) -> [Teams] {
         //our api input is dictionary of key type string and value of any
         
         for teamName in json["api"]["teams"].arrayValue {
@@ -63,7 +63,7 @@ class TeamsAPI {
             
             let leagueImageData = teamName["logo"].stringValue
             
-            let team = Leagues(title: leagueTeamName, imageName: leagueImageData)
+            let team = Teams(title: leagueTeamName, imageName: leagueImageData)
             
             teams.append(team)
         }

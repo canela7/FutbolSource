@@ -11,9 +11,9 @@ import Foundation
 class DataSet {
     
     let categories = [
-        Leagues(title: "Premier League", imageName: "burger0"),
-        Leagues(title: "Premier League", imageName: "burger0"),
-        Leagues(title: "Premier League", imageName: "burger0")
+        Teams(title: "Premier League", imageName: "burger0"),
+        Teams(title: "Premier League", imageName: "burger0"),
+        Teams(title: "Premier League", imageName: "burger0")
     ]
 
 //    let burgers = [

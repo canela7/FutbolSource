@@ -1,10 +1,12 @@
 //
-//  Teams.swift
+//  Leagues.swift
 //  Futbol Source
 //
-//  Created by Brian Canela on 6/4/19.
+//  Created by Brian Canela on 5/30/19.
 //  Copyright © 2019 Brian Canela. All rights reserved.
 //
+
+import Foundation
 
 struct Teams {
     //dont forget to add the id

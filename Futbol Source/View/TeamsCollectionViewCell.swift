@@ -19,11 +19,10 @@ class TeamsCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         leagueImage.layer.cornerRadius =  CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)))
         leagueNameLabel.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        
     }
     
     
-    func configureCell(league: Leagues){
+    func configureCell(league: Teams){
         leagueNameLabel.text = league.title
         
         if let url = NSURL(string: league.imageName) {
@@ -32,8 +31,6 @@ class TeamsCollectionViewCell: UICollectionViewCell {
                 leagueImage.image = UIImage(data: data as Data)
             }
         }
-        
-        //leagueImage.image = UIImage(named: league.imageName)
     }
     
 }
