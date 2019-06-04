@@ -33,7 +33,7 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
-        getTeamsName()
+       // getTeamsName()
         
     }
     

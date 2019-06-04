@@ -64,7 +64,6 @@
                                         <connections>
                                             <outlet property="leagueImage" destination="9aG-Un-PYc" id="Snp-4n-BXb"/>
                                             <outlet property="leagueNameLabel" destination="eJe-5y-kW2" id="vJr-iJ-b0V"/>
-                                            <segue destination="Z58-VJ-A28" kind="show" id="nac-c1-Xtv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -89,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc9-P6-zWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3615.1999999999998" y="81.409295352323838"/>
+            <point key="canvasLocation" x="4609" y="81"/>
         </scene>
         <!--Leagues View Controller-->
         <scene sceneID="Z6H-jG-eG1">
@@ -117,30 +116,31 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-Yx-v4B">
                                                     <rect key="frame" x="15" y="11" width="345" height="128"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plp-VX-pgi">
-                                                            <rect key="frame" x="8" y="14" width="100" height="100"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="plp-VX-pgi">
+                                                            <rect key="frame" x="5" y="5" width="128" height="118"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="4KY-ON-2kN"/>
+                                                                <constraint firstAttribute="width" constant="128" id="4KY-ON-2kN"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nfZ-0F-MAH">
-                                                            <rect key="frame" x="128" y="14" width="209" height="100"/>
+                                                            <rect key="frame" x="153" y="14" width="184" height="100"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.28627450980392155" green="0.28627450980392155" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.28627450980000002" green="0.28627450980000002" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="plp-VX-pgi" firstAttribute="top" secondItem="ODe-Yx-v4B" secondAttribute="top" constant="14" id="4wj-Rx-JLh"/>
+                                                        <constraint firstItem="plp-VX-pgi" firstAttribute="top" secondItem="ODe-Yx-v4B" secondAttribute="top" constant="5" id="4wj-Rx-JLh"/>
                                                         <constraint firstItem="nfZ-0F-MAH" firstAttribute="top" secondItem="ODe-Yx-v4B" secondAttribute="top" constant="14" id="KwI-LZ-r6M"/>
                                                         <constraint firstAttribute="height" constant="128" id="KxU-tk-Woz"/>
-                                                        <constraint firstAttribute="bottom" secondItem="plp-VX-pgi" secondAttribute="bottom" constant="14" id="bVv-Lf-3P8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="plp-VX-pgi" secondAttribute="bottom" constant="5" id="bVv-Lf-3P8"/>
                                                         <constraint firstItem="nfZ-0F-MAH" firstAttribute="leading" secondItem="plp-VX-pgi" secondAttribute="trailing" constant="20" id="dcm-0r-u2h"/>
                                                         <constraint firstAttribute="bottom" secondItem="nfZ-0F-MAH" secondAttribute="bottom" constant="14" id="ffy-rT-N77"/>
                                                         <constraint firstAttribute="trailing" secondItem="nfZ-0F-MAH" secondAttribute="trailing" constant="8" id="hbp-2w-5TG"/>
-                                                        <constraint firstItem="plp-VX-pgi" firstAttribute="leading" secondItem="ODe-Yx-v4B" secondAttribute="leading" constant="8" id="ixD-je-TDk"/>
+                                                        <constraint firstItem="plp-VX-pgi" firstAttribute="leading" secondItem="ODe-Yx-v4B" secondAttribute="leading" constant="5" id="ixD-je-TDk"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -157,6 +157,7 @@
                                             <outlet property="cardView" destination="ODe-Yx-v4B" id="5M9-Bg-hQo"/>
                                             <outlet property="leagueImage" destination="plp-VX-pgi" id="Kdj-mq-v1d"/>
                                             <outlet property="leagueName" destination="nfZ-0F-MAH" id="ceJ-Pw-aPI"/>
+                                            <segue destination="BzP-vF-L3V" kind="show" identifier="" id="uZb-IA-iw0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -174,13 +175,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yAf-8Y-Gmp"/>
                     </view>
+                    <navigationItem key="navigationItem" id="awb-it-2fa"/>
                     <connections>
                         <outlet property="tableView" destination="cFP-Xf-1MN" id="8cs-Eb-2wD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wt-v0-lve" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4568.8000000000002" y="80.50974512743629"/>
+            <point key="canvasLocation" x="3703" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UVk-gW-dOQ">
@@ -196,7 +198,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BzP-vF-L3V" kind="relationship" relationship="rootViewController" id="FfG-Tv-yl6"/>
+                        <segue destination="Z58-VJ-A28" kind="relationship" relationship="rootViewController" id="f1K-tO-zvB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sd-Bz-SE6" userLabel="First Responder" sceneMemberID="firstResponder"/>

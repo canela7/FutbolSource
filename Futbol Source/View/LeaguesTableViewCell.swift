@@ -18,8 +18,8 @@ class LeaguesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-         cardView.addShadowAndRoundedCorners()
-         leagueImage.layer.cornerRadius = cardView.layer.cornerRadius
+        cardView.addShadowAndRoundedCorners()
+        leagueImage.layer.cornerRadius = CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)));
     }
 
     func setup(leagueModel: Leagues){
@@ -29,7 +29,7 @@ class LeaguesTableViewCell: UITableViewCell {
             leagueImage.alpha = 0.3
             leagueImage.image = leagueImg
             
-            UIView.animate(withDuration: 1) {
+            UIView.animate(withDuration: 1.5) {
                 self.leagueImage.alpha = 1
             }
         }   
