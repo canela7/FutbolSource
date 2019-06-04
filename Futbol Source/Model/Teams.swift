@@ -6,4 +6,9 @@
 //  Copyright © 2019 Brian Canela. All rights reserved.
 //
 
-import Foundation
+struct Teams {
+    //dont forget to add the id
+    //let league_id: String
+    let title: String
+    let imageName: String
+}

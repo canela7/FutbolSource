@@ -22,7 +22,7 @@ class LeaguesTableViewCell: UITableViewCell {
         leagueImage.layer.cornerRadius = CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)));
     }
 
-    func setup(leagueModel: Leagues){
+    func setup(leagueModel: Teams){
         leagueName.text = leagueModel.title
         
         if let leagueImg = UIImage(named: leagueModel.imageName) {
