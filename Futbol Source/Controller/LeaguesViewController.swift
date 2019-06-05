@@ -16,7 +16,7 @@ class LeaguesViewController: UIViewController {
     let data = DataSet()
     
     let leagueAPI = LeaguesAPI()
-    let leaguesID = [2,4,8,28,30,31,199]
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ class LeaguesViewController: UIViewController {
     func getLeagues() {
 
             leagueAPI.getLeaguesAlamoFire { (leagues) in
-                if self.leagueAPI.leagues.count > 0 {
+               if self.leagueAPI.leagues.count > 0 {
                     self.tableView.reloadData()
                     
                     if let leagues = leagues {
@@ -48,6 +48,20 @@ class LeaguesViewController: UIViewController {
             }
         
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toTeamsSegue" {
+            if let teamsDestination = segue.destination as? TeamsCollectionVC {
+                if let index = tableView.indexPathForSelectedRow {
+                   let teams = leagueAPI.leagues[index.row]
+                   
+                    teamsDestination.teamIndex = teams.leagueID
+                }
+            }
+        }
+    }
 
 
 }
@@ -59,12 +73,14 @@ extension LeaguesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return data.categories.count
         return leagueAPI.leagues.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! LeaguesTableViewCell
         cell.setup(leagueModel: leagueAPI.leagues[indexPath.row])
+        
         return cell
     }
     
@@ -73,5 +89,8 @@ extension LeaguesViewController: UITableViewDataSource, UITableViewDelegate {
         return 160
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toTeamsSegue", sender: self)
+    }
     
 }

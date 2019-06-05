@@ -58,13 +58,13 @@ class LeaguesAPI {
             if leaguesID.contains(leagueID) {
                 
                 let league = Leagues(leagueID: leagueID, leagueTitle: leagueName, leagueLogo: leagueImageLogo)
-                    leagues.append(league)
+                   leagues.append(league)
                 
             }
             
         }
         print("Leagues:", leagues)
-         print("Leagues Number:", leagues.count)
+        print("Leagues Number:", leagues.count)
         return leagues
     }
 }

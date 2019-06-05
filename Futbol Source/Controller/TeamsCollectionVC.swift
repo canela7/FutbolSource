@@ -15,10 +15,15 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    let leagueData = LeaguesAPI()
+    
     
     let teamsAPI = TeamsAPI()
     let leagues = TeamsCollectionViewCell()
     let teamsIDLeague = [2,4]
+    
+    //need to get the data from the leaguesviewcontroller
+    var teamIndex: Int?
     
     
     override func viewDidLoad() {
@@ -32,15 +37,15 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
        // getTeamsName()
+        if let leagueID = teamIndex {
+            //SINCE IT IS NOT STATIC WE GET AN EMPTY ARRAY WHICH WE NEED SINCE WE ONLY WANT THE ID!!!
+            getTeamsName(leagueID: leagueID)
+        }
         
     }
     
-    func getTeamsName() {
-        for id in teamsIDLeague {
-            
-            teamsAPI.getTeamAlamoFire(id: id) { (teams) in
-                
-                //self.collectionView.reloadData()
+    func getTeamsName(leagueID: Int) {
+            teamsAPI.getTeamAlamoFire(id: leagueID) { (teams) in
                 
                 if self.teamsAPI.teams.count > 0 {
                     
@@ -49,13 +54,12 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
                     
                     if let teams = teams {
                         teams.forEach({ (team) in
-                            //print("Team Name:", team.title)
-                            //print("Team Image Logo Data:", team.imageName)
+                            print("Team Name:", team.title)
+                            print("Team Image Logo Data:", team.imageName)
                         })
                     }
                 }
             }
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

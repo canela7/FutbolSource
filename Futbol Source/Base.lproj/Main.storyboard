@@ -156,7 +156,7 @@
                                             <outlet property="cardView" destination="ODe-Yx-v4B" id="5M9-Bg-hQo"/>
                                             <outlet property="leagueImage" destination="plp-VX-pgi" id="Kdj-mq-v1d"/>
                                             <outlet property="leagueName" destination="nfZ-0F-MAH" id="ceJ-Pw-aPI"/>
-                                            <segue destination="BzP-vF-L3V" kind="show" identifier="" id="uZb-IA-iw0"/>
+                                            <segue destination="BzP-vF-L3V" kind="show" identifier="toTeamsSegue" id="uZb-IA-iw0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

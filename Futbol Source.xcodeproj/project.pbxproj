@@ -93,8 +93,8 @@
 		DAB0C68322A0E2B400A3AF8D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				DA8697DC22A1DD8000176317 /* TeamsCollectionViewCell.swift */,
 				DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */,
+				DA8697DC22A1DD8000176317 /* TeamsCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,8 +102,8 @@
 		DAB0C68422A0E2BA00A3AF8D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				DAD6D89822A5A114005F3136 /* TeamsCollectionVC.swift */,
 				DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */,
+				DAD6D89822A5A114005F3136 /* TeamsCollectionVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
