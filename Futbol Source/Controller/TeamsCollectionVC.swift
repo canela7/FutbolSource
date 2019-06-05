@@ -15,13 +15,11 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let data = DataSet()
     
     let teamsAPI = TeamsAPI()
     let leagues = TeamsCollectionViewCell()
     let teamsIDLeague = [2,4]
     
-    //var teamsNames = [Leagues]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +31,7 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
         
-        getTeamsName()
+       // getTeamsName()
         
     }
     
@@ -46,13 +44,13 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
                 
                 if self.teamsAPI.teams.count > 0 {
                     
-                    print("Teams: ", teams ?? "")
+                    //print("Teams: ", teams ?? "")
                     self.collectionView.reloadData()
                     
                     if let teams = teams {
                         teams.forEach({ (team) in
-                            print("Team Name:", team.title)
-                            print("Team Image Logo Data:", team.imageName)
+                            //print("Team Name:", team.title)
+                            //print("Team Image Logo Data:", team.imageName)
                         })
                     }
                 }
@@ -61,7 +59,7 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
+       // print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
         
         //return data.categories.count;
         return teamsAPI.teams.count;
@@ -70,7 +68,6 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TeamsCollectionViewCell {
             cell.configureCell(league: teamsAPI.teams[indexPath.row])
-            //cell.configureCell(league: data.categories[indexPath.row])
             return cell
         }
         
@@ -81,7 +78,6 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         
         let width = view.bounds.width
         let cellDimension = (width / 2) - 15 //15 is the spacing between the collection view cells
-        //print(width, cellDimension)
         return CGSize(width: cellDimension, height: cellDimension)
     }
     

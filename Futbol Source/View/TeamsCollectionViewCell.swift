@@ -11,24 +11,29 @@ import UIKit
 class TeamsCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var leagueImage: UIImageView!
-    @IBOutlet weak var leagueNameLabel: UILabel!
+    @IBOutlet weak var teamsImage: UIImageView!
     
+    @IBOutlet weak var teamsNameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        leagueImage.layer.cornerRadius =  CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)))
-        leagueNameLabel.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        teamsImage.layer.cornerRadius =  CGFloat(roundf(Float(self.teamsImage.frame.size.width / 2.0)))
+        teamsNameLabel.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
     }
     
     
     func configureCell(league: Teams){
-        leagueNameLabel.text = league.title
+        teamsNameLabel.text = league.title
         
         if let url = NSURL(string: league.imageName) {
             if let data = NSData(contentsOf: url as URL){
-                leagueImage.contentMode  = UIView.ContentMode.scaleAspectFit
-                leagueImage.image = UIImage(data: data as Data)
+                teamsImage.contentMode  = UIView.ContentMode.scaleAspectFit
+                teamsImage.alpha = 0.3
+                teamsImage.image = UIImage(data: data as Data)
+                
+                UIView.animate(withDuration: 1.5) {
+                    self.teamsImage.alpha = 1
+                }
             }
         }
     }

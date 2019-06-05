@@ -22,16 +22,30 @@ class LeaguesTableViewCell: UITableViewCell {
         leagueImage.layer.cornerRadius = CGFloat(roundf(Float(self.leagueImage.frame.size.width / 2.0)));
     }
 
-    func setup(leagueModel: Teams){
-        leagueName.text = leagueModel.title
+    func setup(leagueModel: Leagues){
+        leagueName.text = leagueModel.leagueTitle
         
-        if let leagueImg = UIImage(named: leagueModel.imageName) {
-            leagueImage.alpha = 0.3
-            leagueImage.image = leagueImg
-            
-            UIView.animate(withDuration: 1.5) {
-                self.leagueImage.alpha = 1
+//        if let leagueImg = UIImage(named: leagueModel.imageName) {
+//            leagueImage.alpha = 0.3
+//            leagueImage.image = leagueImg
+//
+//            UIView.animate(withDuration: 1.5) {
+//                self.leagueImage.alpha = 1
+//            }
+//        }
+        if let url = NSURL(string: leagueModel.leagueLogo) {
+            if let data = NSData(contentsOf: url as URL){
+                leagueImage.contentMode  = UIView.ContentMode.scaleAspectFit
+                leagueImage.alpha = 0.3
+                leagueImage.image = UIImage(data: data as Data)
+                
+                UIView.animate(withDuration: 1.5) {
+                    self.leagueImage.alpha = 1
+                }
             }
-        }   
+        }
+
+        
+        
     }
 }

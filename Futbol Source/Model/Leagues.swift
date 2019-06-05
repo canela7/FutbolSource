@@ -9,7 +9,9 @@
 import Foundation
 
 struct Leagues {
-    let league_id: String
+    
+    let leagueID: Int
     let leagueTitle: String
     let leagueLogo: String
+    
 }

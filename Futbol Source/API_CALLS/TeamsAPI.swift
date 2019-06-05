@@ -14,7 +14,7 @@ class TeamsAPI {
     
     var teams = [Teams]()
     
-    func getTeamAlamoFire(id: Int, completion: @escaping LeaguesResponseCompletion) {
+    func getTeamAlamoFire(id: Int, completion: @escaping TeamsResponseCompletion) {
         
         guard let url = URL(string: "\(TEAMS_LEAGUE_URL)\(id)") else {
             print("Error getting LEAGUE_URL. FILE: LEAGUE_API")
@@ -34,17 +34,15 @@ class TeamsAPI {
      
             do {
                 let json = try JSON(data: data)
-                let person = self.parseLeaguesSwifty(json: json)
+                let team = self.parseTeamsSwifty(json: json)
                 
                 DispatchQueue.global(qos: .userInteractive).async {
                     DispatchQueue.main.async {
                         
-                        //return the trip to the main thread
-                        completion(person)
+                        completion(team)
                     }
                 }
                 
-                //completion(person)
             }catch{
                 debugPrint(error.localizedDescription)
             }
@@ -54,22 +52,15 @@ class TeamsAPI {
     
     
     //parsing with Swifty Json
-    private func parseLeaguesSwifty(json: JSON) -> [Teams] {
+    private func parseTeamsSwifty(json: JSON) -> [Teams] {
         //our api input is dictionary of key type string and value of any
         
         for teamName in json["api"]["teams"].arrayValue {
-            
             let leagueTeamName = teamName["name"].stringValue
-            
             let leagueImageData = teamName["logo"].stringValue
-            
             let team = Teams(title: leagueTeamName, imageName: leagueImageData)
-            
             teams.append(team)
         }
-                
-        //let team = Leagues(title: "N/A", imageName: "burger0")
-        
         return teams
     }
     
