@@ -13,7 +13,7 @@ import SwiftyJSON
 class LeaguesAPI {
     
     var leagues = [Leagues]()
-    let leaguesID = [2,8,28,30,31,199]
+    let leaguesID = [2,8,28,30,31,199,297]
     
     func getLeaguesAlamoFire(completion: @escaping LeaguesResponseCompletion) {
         

@@ -156,7 +156,6 @@
                                             <outlet property="cardView" destination="ODe-Yx-v4B" id="5M9-Bg-hQo"/>
                                             <outlet property="leagueImage" destination="plp-VX-pgi" id="Kdj-mq-v1d"/>
                                             <outlet property="leagueName" destination="nfZ-0F-MAH" id="ceJ-Pw-aPI"/>
-                                            <segue destination="BzP-vF-L3V" kind="show" identifier="toTeamsSegue" id="uZb-IA-iw0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -177,6 +176,7 @@
                     <navigationItem key="navigationItem" id="awb-it-2fa"/>
                     <connections>
                         <outlet property="tableView" destination="cFP-Xf-1MN" id="8cs-Eb-2wD"/>
+                        <segue destination="BzP-vF-L3V" kind="show" identifier="toTeamsSegue" id="Iag-Xz-dxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wt-v0-lve" userLabel="First Responder" sceneMemberID="firstResponder"/>
