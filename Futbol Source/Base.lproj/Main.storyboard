@@ -23,7 +23,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6E4-zX-zXg">
-                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="485"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rqw-Ph-BP1">
                                     <size key="itemSize" width="163" height="156"/>
@@ -68,16 +68,26 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <segmentedControl clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sop-DF-0BG">
+                                <rect key="frame" x="16" y="72" width="343" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0df-at-6wT" firstAttribute="trailing" secondItem="WYE-HE-IGb" secondAttribute="trailing" id="1u0-Lg-1K6"/>
-                            <constraint firstItem="6E4-zX-zXg" firstAttribute="trailing" secondItem="WYE-HE-IGb" secondAttribute="trailing" id="LDc-S2-ecB"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" id="2DR-Bf-DLH"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="top" secondItem="Sop-DF-0BG" secondAttribute="bottom" constant="18" id="Ept-TP-hPj"/>
                             <constraint firstItem="0df-at-6wT" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" id="McE-iq-hzy"/>
-                            <constraint firstItem="6E4-zX-zXg" firstAttribute="bottom" secondItem="WYE-HE-IGb" secondAttribute="bottom" id="NxY-IN-yuN"/>
-                            <constraint firstItem="6E4-zX-zXg" firstAttribute="top" secondItem="0df-at-6wT" secondAttribute="bottom" id="Nyx-Sa-Fn7"/>
+                            <constraint firstItem="WYE-HE-IGb" firstAttribute="trailing" secondItem="Sop-DF-0BG" secondAttribute="trailing" constant="16" id="N54-qj-ybH"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="bottom" secondItem="WYE-HE-IGb" secondAttribute="bottom" id="Zvn-mc-6dF"/>
                             <constraint firstItem="0df-at-6wT" firstAttribute="top" secondItem="WYE-HE-IGb" secondAttribute="top" id="dlj-Zf-cQh"/>
-                            <constraint firstItem="6E4-zX-zXg" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" id="xFw-GG-ZGj"/>
+                            <constraint firstItem="6E4-zX-zXg" firstAttribute="trailing" secondItem="WYE-HE-IGb" secondAttribute="trailing" id="jFC-6b-cqo"/>
+                            <constraint firstItem="Sop-DF-0BG" firstAttribute="leading" secondItem="WYE-HE-IGb" secondAttribute="leading" constant="16" id="jnX-Kz-fy6"/>
+                            <constraint firstItem="Sop-DF-0BG" firstAttribute="top" secondItem="0df-at-6wT" secondAttribute="bottom" constant="16" id="t5l-Ct-Nt1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WYE-HE-IGb"/>
                     </view>
@@ -88,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc9-P6-zWA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4609" y="81"/>
+            <point key="canvasLocation" x="4608.8000000000002" y="80.50974512743629"/>
         </scene>
         <!--Leagues View Controller-->
         <scene sceneID="Z6H-jG-eG1">

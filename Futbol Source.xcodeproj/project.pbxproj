@@ -18,6 +18,7 @@
 		DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69022A106CE00A3AF8D /* DataSet.swift */; };
 		DABBED3322A8884B00AFDE75 /* UIActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */; };
 		DABCD1EF22A28406005D2AD0 /* KEYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD1EE22A28406005D2AD0 /* KEYS.swift */; };
+		DAC753BB22A993B700F0A3D7 /* UISegementControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC753BA22A993B700F0A3D7 /* UISegementControl.swift */; };
 		DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42222A0DF4700F9489D /* AppDelegate.swift */; };
 		DACFD42822A0DF4700F9489D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42622A0DF4700F9489D /* Main.storyboard */; };
 		DACFD42A22A0DF4800F9489D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42922A0DF4800F9489D /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		DAB0C69022A106CE00A3AF8D /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
 		DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorExtension.swift; sourceTree = "<group>"; };
 		DABCD1EE22A28406005D2AD0 /* KEYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEYS.swift; sourceTree = "<group>"; };
+		DAC753BA22A993B700F0A3D7 /* UISegementControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegementControl.swift; sourceTree = "<group>"; };
 		DACFD41F22A0DF4700F9489D /* Futbol Source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futbol Source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFD42222A0DF4700F9489D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DACFD42722A0DF4700F9489D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */,
 				DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */,
 				DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */,
+				DAC753BA22A993B700F0A3D7 /* UISegementControl.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */,
 				DAD6D89922A5A114005F3136 /* TeamsCollectionVC.swift in Sources */,
 				DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */,
+				DAC753BB22A993B700F0A3D7 /* UISegementControl.swift in Sources */,
 				DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */,
 				DAE0B11E22A7486F0021D835 /* LeaguesAPI.swift in Sources */,
 				DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */,
