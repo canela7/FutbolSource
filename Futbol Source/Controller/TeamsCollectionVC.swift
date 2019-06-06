@@ -15,6 +15,9 @@ class TeamsCollectionVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var teamsView: UIViewController!
+    @IBOutlet weak var standingsView: UIViewController!
+    
     let leagueData = LeaguesAPI()
     
     //let data = DataSet()
@@ -48,6 +51,9 @@ class TeamsCollectionVC: UIViewController {
         
     }
     
+    
+    
+    
     func getTeamsName(leagueID: Int) {
         
             self.showSpinner()
@@ -69,6 +75,13 @@ class TeamsCollectionVC: UIViewController {
             }
     }
     
+    
+    @IBAction func clickedStandings(_ sender: Any) {
+        let storyboard = UIStoryboard(name: String(describing: StandingsViewController.self), bundle: nil)
+        let standingsvc = storyboard.instantiateInitialViewController()!
+        self.present(standingsvc, animated: true, completion: nil)
+        
+    }
     
 }
 

@@ -137,7 +137,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5i6-9D-F4C">
-                                <rect key="frame" x="0.0" y="118" width="375" height="485"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fhH-h0-Mjp">
                                     <size key="itemSize" width="163" height="156"/>
@@ -182,37 +182,33 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <segmentedControl clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TW0-Wc-5VH">
-                                <rect key="frame" x="16" y="72" width="343" height="29"/>
-                                <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="TW0-Wc-5VH" firstAttribute="top" secondItem="mhI-zf-G2H" secondAttribute="bottom" constant="16" id="9Yn-Vj-LDa"/>
-                            <constraint firstItem="5i6-9D-F4C" firstAttribute="top" secondItem="TW0-Wc-5VH" secondAttribute="bottom" constant="18" id="Cjo-qH-b3q"/>
-                            <constraint firstItem="TW0-Wc-5VH" firstAttribute="leading" secondItem="alg-3T-cnH" secondAttribute="leading" constant="16" id="Ijo-lm-NFw"/>
+                            <constraint firstItem="5i6-9D-F4C" firstAttribute="top" secondItem="mhI-zf-G2H" secondAttribute="bottom" id="5ls-Dr-5Nc"/>
                             <constraint firstItem="mhI-zf-G2H" firstAttribute="top" secondItem="alg-3T-cnH" secondAttribute="top" id="MmX-si-6nh"/>
                             <constraint firstItem="mhI-zf-G2H" firstAttribute="trailing" secondItem="alg-3T-cnH" secondAttribute="trailing" id="NaH-fb-iTd"/>
                             <constraint firstItem="5i6-9D-F4C" firstAttribute="bottom" secondItem="alg-3T-cnH" secondAttribute="bottom" id="T9w-Ih-520"/>
-                            <constraint firstItem="alg-3T-cnH" firstAttribute="trailing" secondItem="TW0-Wc-5VH" secondAttribute="trailing" constant="16" id="UTj-pJ-1Ov"/>
                             <constraint firstItem="5i6-9D-F4C" firstAttribute="trailing" secondItem="alg-3T-cnH" secondAttribute="trailing" id="n2E-64-gJV"/>
                             <constraint firstItem="5i6-9D-F4C" firstAttribute="leading" secondItem="alg-3T-cnH" secondAttribute="leading" id="o2G-64-ROv"/>
                             <constraint firstItem="mhI-zf-G2H" firstAttribute="leading" secondItem="alg-3T-cnH" secondAttribute="leading" id="xtR-Qv-ZrJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="alg-3T-cnH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Leagues" id="K0T-4P-uHl"/>
+                    <navigationItem key="navigationItem" title="Leagues" id="K0T-4P-uHl">
+                        <barButtonItem key="rightBarButtonItem" title="Standings" id="Z85-He-O7R">
+                            <connections>
+                                <action selector="clickedStandings:" destination="m22-MM-8Oq" id="BmR-nT-hlE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="5i6-9D-F4C" id="fkl-Ms-hoi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ui-SM-xgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4782" y="81"/>
+            <point key="canvasLocation" x="4781.6000000000004" y="80.50974512743629"/>
         </scene>
     </scenes>
     <resources>
