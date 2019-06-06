@@ -17,6 +17,8 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     let leagueData = LeaguesAPI()
     
+    //let data = DataSet()
+    
     
     let teamsAPI = TeamsAPI()
     let leagues = TeamsCollectionViewCell()
@@ -24,8 +26,6 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     //need to get the data from the leaguesviewcontroller
     var teamIndex: Int?
-    
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     
     override func viewDidLoad() {
@@ -37,21 +37,23 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
         navigationItem.title = "Teams";
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
-        
-       // getTeamsName()
+    
         if let leagueID = teamIndex {
             //SINCE IT IS NOT STATIC WE GET AN EMPTY ARRAY WHICH WE NEED SINCE WE ONLY WANT THE ID!!!
-            
             getTeamsName(leagueID: leagueID)
         }
         
     }
     
     func getTeamsName(leagueID: Int) {
+        
+            self.showSpinner()
+        
             teamsAPI.getTeamAlamoFire(id: leagueID) { (teams) in
                 
                 if self.teamsAPI.teams.count > 0 {
-                
+                    self.removeSpinner()
+                    
                     self.collectionView.reloadData()
                     
                     if let teams = teams {
@@ -73,6 +75,9 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TeamsCollectionViewCell {
+            
+            //cell.configureCell(league: data.categories[indexPath.row])
+            
             cell.configureCell(league: teamsAPI.teams[indexPath.row])
             return cell
         }

@@ -16,7 +16,7 @@
 		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
 		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
 		DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C69022A106CE00A3AF8D /* DataSet.swift */; };
-		DABBED3322A8884B00AFDE75 /* UIActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBED3222A8884B00AFDE75 /* UIActivityIndicator.swift */; };
+		DABBED3322A8884B00AFDE75 /* UIActivityIndicatorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */; };
 		DABCD1EF22A28406005D2AD0 /* KEYS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABCD1EE22A28406005D2AD0 /* KEYS.swift */; };
 		DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACFD42222A0DF4700F9489D /* AppDelegate.swift */; };
 		DACFD42822A0DF4700F9489D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DACFD42622A0DF4700F9489D /* Main.storyboard */; };
@@ -39,7 +39,7 @@
 		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
 		DAB0C69022A106CE00A3AF8D /* DataSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSet.swift; sourceTree = "<group>"; };
-		DABBED3222A8884B00AFDE75 /* UIActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicator.swift; sourceTree = "<group>"; };
+		DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorExtension.swift; sourceTree = "<group>"; };
 		DABCD1EE22A28406005D2AD0 /* KEYS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KEYS.swift; sourceTree = "<group>"; };
 		DACFD41F22A0DF4700F9489D /* Futbol Source.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Futbol Source.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DACFD42222A0DF4700F9489D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,7 +124,7 @@
 			children = (
 				DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */,
 				DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */,
-				DABBED3222A8884B00AFDE75 /* UIActivityIndicator.swift */,
+				DABBED3222A8884B00AFDE75 /* UIActivityIndicatorExtension.swift */,
 			);
 			path = UIExtensions;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			files = (
 				DAE0B11A22A729370021D835 /* Teams.swift in Sources */,
 				DA8697E422A1F9DE00176317 /* TeamsAPI.swift in Sources */,
-				DABBED3322A8884B00AFDE75 /* UIActivityIndicator.swift in Sources */,
+				DABBED3322A8884B00AFDE75 /* UIActivityIndicatorExtension.swift in Sources */,
 				DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */,
 				DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */,
 				DA8697DD22A1DD8000176317 /* TeamsCollectionViewCell.swift in Sources */,

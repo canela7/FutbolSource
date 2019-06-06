@@ -15,6 +15,13 @@ class DataSet {
         Teams(title: "Premier League", imageName: "burger0"),
         Teams(title: "Premier League", imageName: "burger0")
     ]
+    
+    
+    let leagueCategories = [
+        Leagues(leagueID: 1, leagueTitle: "Premier League", leagueLogo: "burger0"),
+        Leagues(leagueID: 2, leagueTitle: "Liga MX", leagueLogo: "burger0"),
+        Leagues(leagueID: 3, leagueTitle: "La Liga", leagueLogo: "burger0")
+    ]
 
 //    let burgers = [
 //        Recipe(title: "Bacon Cheeseburger", instructions: "1 1/2 pounds ground beef chuck. \n4 1/2-inch cubes pepper jack cheese (about 1 ounce total) \nKosher salt and freshly ground pepper.\n1/2 tablespoon vegetable oil. \n4 slices cheddar cheese (about 2 ounces) \n4 hamburger buns. \nKetchup, mustard and/or mayonnaise, for spreading (optional)", imageName: "burger0")
