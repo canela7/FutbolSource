@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "teamsCell"
 
-class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+class TeamsCollectionVC: UIViewController {
     
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -30,10 +30,13 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        
+       
         navigationItem.title = "Teams";
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
@@ -66,59 +69,31 @@ class TeamsCollectionVC: UIViewController, UICollectionViewDelegate, UICollectio
             }
     }
     
+    
+}
+
+extension TeamsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       // print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
-        
+        // print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
+
         //return data.categories.count;
         return teamsAPI.teams.count;
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TeamsCollectionViewCell {
-            
-            //cell.configureCell(league: data.categories[indexPath.row])
-            
             cell.configureCell(league: teamsAPI.teams[indexPath.row])
             return cell
         }
-        
+
         return UICollectionViewCell()
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+
         let width = view.bounds.width
         let cellDimension = (width / 2) - 15 //15 is the spacing between the collection view cells
         return CGSize(width: cellDimension, height: cellDimension)
     }
-    
-    
 }
-
-
-
-//extension TeamsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        // print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
-//
-//        //return data.categories.count;
-//        return teamsAPI.teams.count;
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TeamsCollectionViewCell {
-//            cell.configureCell(league: teamsAPI.teams[indexPath.row])
-//            return cell
-//        }
-//
-//        return UICollectionViewCell()
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//
-//        let width = view.bounds.width
-//        let cellDimension = (width / 2) - 15 //15 is the spacing between the collection view cells
-//        return CGSize(width: cellDimension, height: cellDimension)
-//    }
-//}
