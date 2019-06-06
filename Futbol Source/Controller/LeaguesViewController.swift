@@ -25,7 +25,7 @@ class LeaguesViewController: UIViewController {
         tableView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         navigationItem.title = "Leagues";
         // Do any additional setup after loading the view.
-        getLeagues()
+        //getLeagues()
     }
     
     
@@ -71,20 +71,20 @@ class LeaguesViewController: UIViewController {
 }
 
 
-extension LeaguesViewController: UITableViewDataSource, UITableViewDelegate {
+extension LeaguesViewController: UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return leagueAPI.leagues.count
-        //return data.leagueCategories.count
+        //return leagueAPI.leagues.count
+        return data.leagueCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as! LeaguesTableViewCell
      
-        cell.setup(leagueModel: leagueAPI.leagues[indexPath.row])
-//        cell.setup(leagueModel: data.leagueCategories[indexPath.row])
+       // cell.setup(leagueModel: leagueAPI.leagues[indexPath.row])
+        cell.setup(leagueModel: data.leagueCategories[indexPath.row])
         
         return cell
     }
@@ -97,5 +97,15 @@ extension LeaguesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "toTeamsSegue", sender: self)
     }
+    
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        toggleBlur(true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        toggleBlur(false)
+    }
+    
     
 }

@@ -8,6 +8,8 @@
 
 import UIKit
 
+fileprivate var blurView: UIView?
+
 class UISearchBarApperance: UISearchBar {
 
     required init?(coder aDecoder: NSCoder) {
@@ -17,7 +19,15 @@ class UISearchBarApperance: UISearchBar {
         placeholder = "Search for a Team"
         searchBarStyle = .minimal
         backgroundColor = Theme.navBarColor.withAlphaComponent(0.95)
+        
+        // SearchBar text
+        let textFieldInsideUISearchBar = value(forKey: "searchField") as? UITextField
+        textFieldInsideUISearchBar?.textColor = UIColor.white
     }
+    
 
+
+    
+    
 
 }

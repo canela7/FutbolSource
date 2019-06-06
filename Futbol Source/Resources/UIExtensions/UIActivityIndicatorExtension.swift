@@ -20,4 +20,12 @@ extension UIViewController {
         aView = nil
     }
     
+    
+    func toggleBlur(_ blurred: Bool){
+        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: -0.1, options: .curveEaseOut, animations: {
+            aView?.alpha = blurred ? 1 : 0
+        }, completion: nil)
+    }
+    
+    
 }
