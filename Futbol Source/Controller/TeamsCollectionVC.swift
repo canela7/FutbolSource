@@ -80,7 +80,6 @@ class TeamsCollectionVC: UIViewController {
         let storyboard = UIStoryboard(name: String(describing: StandingsViewController.self), bundle: nil)
         let standingsvc = storyboard.instantiateInitialViewController()!
         self.present(standingsvc, animated: true, completion: nil)
-        
     }
     
 }

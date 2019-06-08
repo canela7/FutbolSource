@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CD30AD99D8D096B27060612A /* Pods_Futbol_Source.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FFB9774D411D95C9CA36989 /* Pods_Futbol_Source.framework */; };
+		DA1D0C8E22AC509E002ADAEF /* StandingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C8D22AC509E002ADAEF /* StandingsTableViewCell.swift */; };
+		DA1D0C9022AC5251002ADAEF /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */; };
+		DA1D0C9222AC5334002ADAEF /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C9122AC5334002ADAEF /* Standings.swift */; };
 		DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */; };
 		DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */; };
 		DA4743D922A5D93600F36A85 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		3FFB9774D411D95C9CA36989 /* Pods_Futbol_Source.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Futbol_Source.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77908679D61AE604442B8F09 /* Pods-Futbol Source.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Futbol Source.release.xcconfig"; path = "Target Support Files/Pods-Futbol Source/Pods-Futbol Source.release.xcconfig"; sourceTree = "<group>"; };
+		DA1D0C8D22AC509E002ADAEF /* StandingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTableViewCell.swift; sourceTree = "<group>"; };
+		DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsAPI.swift; sourceTree = "<group>"; };
+		DA1D0C9122AC5334002ADAEF /* Standings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
 		DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			children = (
 				DA8697E322A1F9DE00176317 /* TeamsAPI.swift */,
 				DAE0B11D22A7486F0021D835 /* LeaguesAPI.swift */,
+				DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */,
 			);
 			path = API_CALLS;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 			children = (
 				DAE0B11922A729370021D835 /* Teams.swift */,
 				DAE0B11B22A72D610021D835 /* Leagues.swift */,
+				DA1D0C9122AC5334002ADAEF /* Standings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +113,7 @@
 			children = (
 				DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */,
 				DA8697DC22A1DD8000176317 /* TeamsCollectionViewCell.swift */,
+				DA1D0C8D22AC509E002ADAEF /* StandingsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,7 +334,10 @@
 				DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */,
 				DAE0B11E22A7486F0021D835 /* LeaguesAPI.swift in Sources */,
 				DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */,
+				DA1D0C9222AC5334002ADAEF /* Standings.swift in Sources */,
+				DA1D0C8E22AC509E002ADAEF /* StandingsTableViewCell.swift in Sources */,
 				DA4743D922A5D93600F36A85 /* UIViewExtensions.swift in Sources */,
+				DA1D0C9022AC5251002ADAEF /* StandingsAPI.swift in Sources */,
 				DABCD1EF22A28406005D2AD0 /* KEYS.swift in Sources */,
 				DAE0B11C22A72D610021D835 /* Leagues.swift in Sources */,
 				DA6C151722A9C415002FE132 /* StandingsViewController.swift in Sources */,
