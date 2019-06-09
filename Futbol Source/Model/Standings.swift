@@ -13,6 +13,6 @@ struct Standings {
     let rank: Int
     let teamName: String
     let teamPoints: Int
-    let leagueFlag: String
+    let leagueLogo: String
     
 }

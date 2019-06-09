@@ -15,13 +15,21 @@ class StandingsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    //need to get the data from the leaguesviewcontroller
+    var leagueIndex: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
-        print("IAM HERE")
+        
+        if let leagueID  = leagueIndex {
+            print("Inside StandingsVC")
+            print(leagueID)
+        }
+        
     }
  
    
@@ -37,7 +45,7 @@ extension StandingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

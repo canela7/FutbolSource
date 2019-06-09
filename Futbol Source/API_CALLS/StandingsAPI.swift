@@ -43,7 +43,7 @@ class StandingsAPI {
                 DispatchQueue.global(qos: .userInteractive).async {
                     DispatchQueue.main.async {
                         
-                        completion(standing)
+                        //completion(standing)
                     }
                 }
                 
@@ -55,9 +55,16 @@ class StandingsAPI {
     }
     
     
-    private func parseStandingsSwifty(json: JSON) -> [Standings] {
-    
-        return standings
+    private func parseStandingsSwifty(json: JSON) {
+        
+        print("Inside STANDINGS API")
+        
+        for standings in json["api"]["results"]["standings"][0].arrayValue {
+            
+            print(standings)
+        }
+        
+       // return standings
     }
     
     

@@ -42,9 +42,9 @@ class LeaguesViewController: UIViewController {
                     self.tableView.reloadData()
                     if let leagues = leagues {
                         leagues.forEach({ (league) in
-                            print("League ID: ", league.leagueID)
-                            print("League Name: ", league.leagueTitle)
-                            print("League Image Link: ", league.leagueLogo)
+                            //print("League ID: ", league.leagueID)
+                            //print("League Name: ", league.leagueTitle)
+                            //print("League Image Link: ", league.leagueLogo)
                         })
                     }
                     
@@ -60,10 +60,11 @@ class LeaguesViewController: UIViewController {
             if let teamsDestination = segue.destination as? TeamsCollectionVC {
                 if let index = tableView.indexPathForSelectedRow {
                    let teams = leagueAPI.leagues[index.row]
-                   
                     teamsDestination.teamIndex = teams.leagueID
                 }
             }
+            
+            
         }
     }
 

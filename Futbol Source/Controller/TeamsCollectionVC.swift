@@ -77,9 +77,17 @@ class TeamsCollectionVC: UIViewController {
     
     
     @IBAction func clickedStandings(_ sender: Any) {
+        
+        
         let storyboard = UIStoryboard(name: String(describing: StandingsViewController.self), bundle: nil)
         let standingsvc = storyboard.instantiateInitialViewController()!
-        self.present(standingsvc, animated: true, completion: nil)
+        let vc = standingsvc as! StandingsViewController
+        
+        
+        //pass teamIndex to the standings vc
+        vc.leagueIndex = teamIndex
+            
+        self.present(vc, animated: true, completion: nil)
     }
     
 }

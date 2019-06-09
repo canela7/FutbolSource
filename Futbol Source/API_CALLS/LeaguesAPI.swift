@@ -63,8 +63,8 @@ class LeaguesAPI {
             }
             
         }
-        print("Leagues:", leagues)
-        print("Leagues Number:", leagues.count)
+       // print("Leagues:", leagues)
+       // print("Leagues Number:", leagues.count)
         return leagues
     }
 }

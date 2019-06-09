@@ -91,8 +91,8 @@
 		DA8697E222A1F9B800176317 /* API_CALLS */ = {
 			isa = PBXGroup;
 			children = (
-				DA8697E322A1F9DE00176317 /* TeamsAPI.swift */,
 				DAE0B11D22A7486F0021D835 /* LeaguesAPI.swift */,
+				DA8697E322A1F9DE00176317 /* TeamsAPI.swift */,
 				DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */,
 			);
 			path = API_CALLS;
@@ -101,8 +101,8 @@
 		DAB0C68222A0E2AE00A3AF8D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DAE0B11922A729370021D835 /* Teams.swift */,
 				DAE0B11B22A72D610021D835 /* Leagues.swift */,
+				DAE0B11922A729370021D835 /* Teams.swift */,
 				DA1D0C9122AC5334002ADAEF /* Standings.swift */,
 			);
 			path = Model;
