@@ -40,6 +40,7 @@ class LeaguesViewController: UIViewController {
                     self.removeSpinner()
                 
                     self.tableView.reloadData()
+                
                     if let leagues = leagues {
                         leagues.forEach({ (league) in
                             //print("League ID: ", league.leagueID)

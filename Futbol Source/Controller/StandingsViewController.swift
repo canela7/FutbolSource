@@ -13,6 +13,7 @@ private let reuseIdentifier = "standingsCell"
 class StandingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var leagueName: UILabel!
     
     let standingAPI = StandingsAPI()
     //need to get the data from the leaguesviewcontroller
@@ -51,10 +52,7 @@ class StandingsViewController: UIViewController {
                 
                 if let standings = standings {
                     standings.forEach({ (standing) in
-                        print(standing.rank)
-                        print(standing.teamName)
-                        print(standing.teamPoints)
-                        print(standing.leagueLogo)
+                        self.leagueName.text = "\(standing.leagueName) Standings"
                     })
                 }
             }
@@ -69,17 +67,22 @@ extension StandingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return standingAPI.standings.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? LeaguesTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? StandingsTableViewCell {
             //cell.configureCell(league: teamsAPI.teams[indexPath.row])
+            cell.setup(standingsModel: standingAPI.standings[indexPath.row])
             return cell
         }
         
         return UITableViewCell()
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
 }

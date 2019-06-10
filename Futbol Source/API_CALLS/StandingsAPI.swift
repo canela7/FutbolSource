@@ -45,7 +45,7 @@ class StandingsAPI {
                 DispatchQueue.global(qos: .userInteractive).async {
                     DispatchQueue.main.async {
                         
-                        //completion(standing)
+                        completion(standing)
                     }
                 }
                 
@@ -57,23 +57,27 @@ class StandingsAPI {
     }
     
     
-    private func parseStandingsSwifty(json: JSON) {
-        
- 
+    private func parseStandingsSwifty(json: JSON) -> [Standings] {
         let standingsArray = json["api"]["standings"].arrayValue
-    
-        
         let teamStandingArray = standingsArray[0].arrayValue
         
-       
         for team in teamStandingArray{
                 print(team["rank"].stringValue)
                 print(team["teamName"].stringValue)
                 print(team["points"].intValue)
                 print(team["logo"].stringValue)
+            
+            let teamRank = team["rank"].intValue
+            let teamName = team["teamName"].stringValue
+            let teamPoints = team["points"].intValue
+            let teamLogo = team["logo"].stringValue
+            let leagueName = team["group"].stringValue
+            
+            let teamStandings = Standings(rank: teamRank, teamName: teamName, teamPoints: teamPoints, leagueLogo: teamLogo, leagueName: leagueName)
+            
+            standings.append(teamStandings)
         }
-        
-       // return standings
+       return standings
     }
     
     

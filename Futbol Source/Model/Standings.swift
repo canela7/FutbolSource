@@ -14,5 +14,6 @@ struct Standings {
     let teamName: String
     let teamPoints: Int
     let leagueLogo: String
+    let leagueName: String
     
 }
