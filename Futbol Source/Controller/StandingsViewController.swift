@@ -14,7 +14,7 @@ class StandingsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    
+    let standingAPI = StandingsAPI()
     //need to get the data from the leaguesviewcontroller
     var leagueIndex: Int?
     
@@ -28,6 +28,7 @@ class StandingsViewController: UIViewController {
         if let leagueID  = leagueIndex {
             print("Inside StandingsVC")
             print(leagueID)
+            getLeagueStandings(leagueID: leagueID)
         }
         
     }
@@ -37,6 +38,29 @@ class StandingsViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func getLeagueStandings(leagueID: Int) {
+        
+        self.showSpinner()
+        
+        standingAPI.getLeagueStandingsAlamoFire(id: leagueID) { (standings) in
+            
+            if self.standingAPI.standings.count > 0 {
+                self.removeSpinner()
+                
+                self.tableView.reloadData()
+                
+                if let standings = standings {
+                    standings.forEach({ (standing) in
+                        print(standing.rank)
+                        print(standing.teamName)
+                        print(standing.teamPoints)
+                        print(standing.leagueLogo)
+                    })
+                }
+            }
+        }
+    }
+
     
 }
 

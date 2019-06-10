@@ -54,7 +54,7 @@ class TeamsAPI {
     //parsing with Swifty Json
     private func parseTeamsSwifty(json: JSON) -> [Teams] {
         //our api input is dictionary of key type string and value of any
-        
+      
         for teamName in json["api"]["teams"].arrayValue {
             let leagueTeamName = teamName["name"].stringValue
             let leagueImageData = teamName["logo"].stringValue

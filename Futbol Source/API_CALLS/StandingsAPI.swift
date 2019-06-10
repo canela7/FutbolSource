@@ -18,12 +18,14 @@ class StandingsAPI {
     var standings = [Standings]()
     
     
-    func getTeamAlamoFire(id: Int, completion: @escaping StandingsResponseCompletion) {
+    func getLeagueStandingsAlamoFire(id: Int, completion: @escaping StandingsResponseCompletion) {
         
         guard let url = URL(string: "\(STANDINGS_URL)\(id)") else {
             print("Error getting LEAGUE_URL. FILE: LEAGUE_API")
             return
         }
+        
+        print("URL: ",  url)
         
         let parameters: Parameters = ["id": id.description]
         
@@ -57,11 +59,18 @@ class StandingsAPI {
     
     private func parseStandingsSwifty(json: JSON) {
         
-        print("Inside STANDINGS API")
+ 
+        let standingsArray = json["api"]["standings"].arrayValue
+    
         
-        for standings in json["api"]["results"]["standings"][0].arrayValue {
-            
-            print(standings)
+        let teamStandingArray = standingsArray[0].arrayValue
+        
+       
+        for team in teamStandingArray{
+                print(team["rank"].stringValue)
+                print(team["teamName"].stringValue)
+                print(team["points"].intValue)
+                print(team["logo"].stringValue)
         }
         
        // return standings

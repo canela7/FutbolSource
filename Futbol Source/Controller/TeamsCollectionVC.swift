@@ -67,8 +67,8 @@ class TeamsCollectionVC: UIViewController {
                     
                     if let teams = teams {
                         teams.forEach({ (team) in
-                            print("Team Name:", team.title)
-                            print("Team Image Logo Data:", team.imageName)
+                          //  print("Team Name:", team.title)
+                          //  print("Team Image Logo Data:", team.imageName)
                         })
                     }
                 }
