@@ -77,6 +77,8 @@ class StandingsAPI {
             
             standings.append(teamStandings)
         }
+        
+        
        return standings
     }
     

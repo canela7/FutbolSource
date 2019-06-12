@@ -22,7 +22,7 @@ class StandingsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-         cardView.addShadowAndRoundedCorners()
+         cardView.addShadowTableCell()
       
     }
     

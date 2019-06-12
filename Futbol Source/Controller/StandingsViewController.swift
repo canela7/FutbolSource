@@ -51,9 +51,7 @@ class StandingsViewController: UIViewController {
                 self.tableView.reloadData()
                 
                 if let standings = standings {
-                    standings.forEach({ (standing) in
-                        self.leagueName.text = "\(standing.leagueName) Standings"
-                    })
+                    self.leagueName.text = "\(standings[0].leagueName)"
                 }
             }
         }
