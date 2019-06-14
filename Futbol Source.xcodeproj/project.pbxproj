@@ -14,6 +14,8 @@
 		DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */; };
 		DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */; };
 		DA4743D922A5D93600F36A85 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */; };
+		DA63362D22B3135800E5737F /* PlayersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA63362C22B3135800E5737F /* PlayersViewController.storyboard */; };
+		DA63362F22B31AB300E5737F /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA63362E22B31AB300E5737F /* PlayersViewController.swift */; };
 		DA6C151522A9BFEE002FE132 /* Standings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6C151422A9BFEE002FE132 /* Standings.storyboard */; };
 		DA6C151722A9C415002FE132 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6C151622A9C415002FE132 /* StandingsViewController.swift */; };
 		DA6C151922A9CC88002FE132 /* StandingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6C151822A9CC88002FE132 /* StandingsViewController.storyboard */; };
@@ -44,6 +46,8 @@
 		DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		DA63362C22B3135800E5737F /* PlayersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayersViewController.storyboard; sourceTree = "<group>"; };
+		DA63362E22B31AB300E5737F /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 		DA6C151422A9BFEE002FE132 /* Standings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Standings.storyboard; sourceTree = "<group>"; };
 		DA6C151622A9C415002FE132 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
 		DA6C151822A9CC88002FE132 /* StandingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StandingsViewController.storyboard; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */,
 				DAD6D89822A5A114005F3136 /* TeamsCollectionVC.swift */,
 				DA6C151622A9C415002FE132 /* StandingsViewController.swift */,
+				DA63362E22B31AB300E5737F /* PlayersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				DAB0C68422A0E2BA00A3AF8D /* Controller */,
 				DACFD42222A0DF4700F9489D /* AppDelegate.swift */,
 				DACFD42622A0DF4700F9489D /* Main.storyboard */,
+				DA63362C22B3135800E5737F /* PlayersViewController.storyboard */,
 				DA6C151822A9CC88002FE132 /* StandingsViewController.storyboard */,
 				DA6C151422A9BFEE002FE132 /* Standings.storyboard */,
 				DACFD42922A0DF4800F9489D /* Assets.xcassets */,
@@ -266,6 +272,7 @@
 			files = (
 				DACFD42D22A0DF4800F9489D /* LaunchScreen.storyboard in Resources */,
 				DACFD42A22A0DF4800F9489D /* Assets.xcassets in Resources */,
+				DA63362D22B3135800E5737F /* PlayersViewController.storyboard in Resources */,
 				DA6C151522A9BFEE002FE132 /* Standings.storyboard in Resources */,
 				DACFD42822A0DF4700F9489D /* Main.storyboard in Resources */,
 				DA6C151922A9CC88002FE132 /* StandingsViewController.storyboard in Resources */,
@@ -329,6 +336,7 @@
 				DA8697DD22A1DD8000176317 /* TeamsCollectionViewCell.swift in Sources */,
 				DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */,
 				DAD6D89922A5A114005F3136 /* TeamsCollectionVC.swift in Sources */,
+				DA63362F22B31AB300E5737F /* PlayersViewController.swift in Sources */,
 				DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */,
 				DAC753BB22A993B700F0A3D7 /* UISegementControl.swift in Sources */,
 				DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */,
