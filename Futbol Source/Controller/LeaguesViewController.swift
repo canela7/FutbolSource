@@ -48,10 +48,8 @@ class LeaguesViewController: UIViewController {
                             //print("League Image Link: ", league.leagueLogo)
                         })
                     }
-                    
                 }
             }
-        
     }
     
     
@@ -64,8 +62,6 @@ class LeaguesViewController: UIViewController {
                     teamsDestination.teamIndex = teams.leagueID
                 }
             }
-            
-            
         }
     }
 

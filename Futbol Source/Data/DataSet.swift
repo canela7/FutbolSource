@@ -10,12 +10,12 @@ import Foundation
 
 class DataSet {
     
-    let categories = [
-        Teams(title: "Premier League", imageName: "burger0"),
-        Teams(title: "Premier League", imageName: "burger0"),
-        Teams(title: "Premier League", imageName: "burger0")
-    ]
-    
+//    let categories = [
+//        Teams(title: "Premier League", imageName: "burger0"),
+//        Teams(title: "Premier League", imageName: "burger0"),
+//        Teams(title: "Premier League", imageName: "burger0")
+//    ]
+//
     
     let leagueCategories = [
         Leagues(leagueID: 1, leagueTitle: "Premier League", leagueLogo: "burger0"),

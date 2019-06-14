@@ -56,9 +56,10 @@ class TeamsAPI {
         //our api input is dictionary of key type string and value of any
       
         for teamName in json["api"]["teams"].arrayValue {
+            let teamID = teamName["team_id"].intValue
             let leagueTeamName = teamName["name"].stringValue
-            let leagueImageData = teamName["logo"].stringValue
-            let team = Teams(title: leagueTeamName, imageName: leagueImageData)
+            let teamImageData = teamName["logo"].stringValue
+            let team = Teams(team_id: teamID, title: leagueTeamName, imageName: teamImageData)
             teams.append(team)
         }
         return teams

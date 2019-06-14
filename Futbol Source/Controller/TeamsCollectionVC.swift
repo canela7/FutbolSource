@@ -30,6 +30,7 @@ class TeamsCollectionVC: UIViewController {
     //need to get the data from the leaguesviewcontroller
     var teamIndex: Int?
     
+    var teamIdToPass: Teams?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,6 +77,7 @@ class TeamsCollectionVC: UIViewController {
     }
     
     
+    
     @IBAction func clickedStandings(_ sender: Any) {
         
         
@@ -95,8 +97,6 @@ class TeamsCollectionVC: UIViewController {
 extension TeamsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource,  UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // print("INSIDE FILE: LEAGUECOLLECTIONVC: ", teamsAPI.teams.count)
-
         //return data.categories.count;
         return teamsAPI.teams.count;
     }
@@ -116,4 +116,22 @@ extension TeamsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         let cellDimension = (width / 2) - 15 //15 is the spacing between the collection view cells
         return CGSize(width: cellDimension, height: cellDimension)
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+        //pass the team id to the players view controller. need to fix this part
+        teamIdToPass = teamsAPI.teams[indexPath.item]
+
+        print("Inside teams collection view, ", teamIdToPass ?? "NothingInsideTeamCollectionView")
+        performSegue(withIdentifier: "goToPlayers", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let playersVC = segue.destination as? PlayersViewController {
+            playersVC.teamId = teamIdToPass
+        }
+    }
+    
+    
 }

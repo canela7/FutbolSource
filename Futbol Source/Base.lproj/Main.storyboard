@@ -178,7 +178,6 @@
                                         <connections>
                                             <outlet property="teamsImage" destination="Tq6-G6-6ff" id="692-xX-aki"/>
                                             <outlet property="teamsNameLabel" destination="D0q-um-Db7" id="IAe-zj-B3p"/>
-                                            <segue destination="FsH-Av-mhX" kind="show" id="Np0-cu-sLR"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -224,7 +223,4 @@
     <resources>
         <image name="burger0" width="1052" height="699"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Np0-cu-sLR"/>
-    </inferredMetricsTieBreakers>
 </document>

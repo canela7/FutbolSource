@@ -27,8 +27,8 @@ class StandingsViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         if let leagueID  = leagueIndex {
-            print("Inside StandingsVC")
-            print(leagueID)
+           //print("Inside StandingsVC")
+           // print(leagueID)
             getLeagueStandings(leagueID: leagueID)
         }
         
@@ -80,7 +80,7 @@ extension StandingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 130
     }
     
 }

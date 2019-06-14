@@ -7,8 +7,8 @@
 //
 
 struct Teams {
-    //dont forget to add the id
-    //let league_id: String
+
+    let team_id: Int
     let title: String
     let imageName: String
     

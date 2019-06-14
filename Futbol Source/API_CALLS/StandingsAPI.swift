@@ -25,7 +25,7 @@ class StandingsAPI {
             return
         }
         
-        print("URL: ",  url)
+//        print("URL: ",  url)
         
         let parameters: Parameters = ["id": id.description]
         
@@ -62,10 +62,10 @@ class StandingsAPI {
         let teamStandingArray = standingsArray[0].arrayValue
         
         for team in teamStandingArray{
-                print(team["rank"].stringValue)
-                print(team["teamName"].stringValue)
-                print(team["points"].intValue)
-                print(team["logo"].stringValue)
+//                print(team["rank"].stringValue)
+//                print(team["teamName"].stringValue)
+//                print(team["points"].intValue)
+//                print(team["logo"].stringValue)
             
             let teamRank = team["rank"].intValue
             let teamName = team["teamName"].stringValue
@@ -77,8 +77,7 @@ class StandingsAPI {
             
             standings.append(teamStandings)
         }
-        
-        
+
        return standings
     }
     
