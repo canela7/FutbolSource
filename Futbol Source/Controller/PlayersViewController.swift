@@ -18,20 +18,20 @@ class PlayersViewController: UIViewController {
     
     let playerAPI = PlayersAPI()
     
-    var teamId: Teams?
+    var teamId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
-        navigationItem.title = "Players";
+        //navigationItem.title = "Players";
         
-      //  print("Inside TeamId: ", teamId ?? "Nothing")
+       print("Inside TeamId: ", teamId ?? "No value for team ID")
         
         if let teamID = teamId {
-            print("I am inside the PlayersVC: ", teamID.team_id)
-            getPlayers(teamID: teamID.team_id)
+            print("I am inside the PlayersVC: ", teamID)
+            getPlayers(teamID: teamID)
         }
         
 //        getPlayers(teamID: 104)
@@ -59,11 +59,7 @@ class PlayersViewController: UIViewController {
             }
         }
     }
-
     
-    @IBAction func goBackToTeams(_ sender: Any) {
-        dismiss(animated: true)
-    }
     
 
 }

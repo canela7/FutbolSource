@@ -27,10 +27,10 @@ class TeamsCollectionVC: UIViewController {
     let leagues = TeamsCollectionViewCell()
     let teamsIDLeague = [2,4]
     
-    //need to get the data from the leaguesviewcontroller
+    //need to get the data from the leaguesviewcontroller, need the league_id
     var teamIndex: Int?
     
-    var teamIdToPass: Teams?
+    var teamIdToPass: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,8 @@ class TeamsCollectionVC: UIViewController {
         navigationItem.title = "Teams";
         
         ///step 1: make network request,, then get the leagues from completion handler in Leaguesapi file
-    
+        print("Team index:", teamIndex ?? "nothing in teamIndex")
+        
         if let leagueID = teamIndex {
             //SINCE IT IS NOT STATIC WE GET AN EMPTY ARRAY WHICH WE NEED SINCE WE ONLY WANT THE ID!!!
             getTeamsName(leagueID: leagueID)
@@ -85,7 +86,6 @@ class TeamsCollectionVC: UIViewController {
         let standingsvc = storyboard.instantiateInitialViewController()!
         let vc = standingsvc as! StandingsViewController
         
-        
         //pass teamIndex to the standings vc
         vc.leagueIndex = teamIndex
             
@@ -121,10 +121,11 @@ extension TeamsCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
         //pass the team id to the players view controller. need to fix this part
-        teamIdToPass = teamsAPI.teams[indexPath.item]
+        teamIdToPass = teamsAPI.teams[indexPath.item].team_id
 
-        print("Inside teams collection view, ", teamIdToPass ?? "NothingInsideTeamCollectionView")
+        print("Inside teams collection view, ", teamsAPI.teams[indexPath.item].team_id)
         performSegue(withIdentifier: "goToPlayers", sender: self)
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
