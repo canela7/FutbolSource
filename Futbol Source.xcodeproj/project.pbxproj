@@ -11,6 +11,9 @@
 		DA1D0C8E22AC509E002ADAEF /* StandingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C8D22AC509E002ADAEF /* StandingsTableViewCell.swift */; };
 		DA1D0C9022AC5251002ADAEF /* StandingsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */; };
 		DA1D0C9222AC5334002ADAEF /* Standings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1D0C9122AC5334002ADAEF /* Standings.swift */; };
+		DA445E5A22B862CE00F9498E /* PlayerStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA445E5922B862CE00F9498E /* PlayerStatsViewController.swift */; };
+		DA445E5C22B8653400F9498E /* PlayerStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA445E5B22B8653400F9498E /* PlayerStats.swift */; };
+		DA445E5E22B866D700F9498E /* PlayerStatsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA445E5D22B866D700F9498E /* PlayerStatsAPI.swift */; };
 		DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */; };
 		DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */; };
 		DA4743D922A5D93600F36A85 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */; };
@@ -23,6 +26,7 @@
 		DA6C151922A9CC88002FE132 /* StandingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6C151822A9CC88002FE132 /* StandingsViewController.storyboard */; };
 		DA8697DD22A1DD8000176317 /* TeamsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697DC22A1DD8000176317 /* TeamsCollectionViewCell.swift */; };
 		DA8697E422A1F9DE00176317 /* TeamsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8697E322A1F9DE00176317 /* TeamsAPI.swift */; };
+		DAAF2FF722B5D7FB008C636A /* PlayerStats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAAF2FF622B5D7FB008C636A /* PlayerStats.storyboard */; };
 		DAB09B4822B3352B003ECC61 /* PlayersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB09B4722B3352B003ECC61 /* PlayersAPI.swift */; };
 		DAB0C68722A0E7A500A3AF8D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68622A0E7A500A3AF8D /* Theme.swift */; };
 		DAB0C68A22A0E9E900A3AF8D /* UISearchBarApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */; };
@@ -46,6 +50,9 @@
 		DA1D0C8D22AC509E002ADAEF /* StandingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsTableViewCell.swift; sourceTree = "<group>"; };
 		DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsAPI.swift; sourceTree = "<group>"; };
 		DA1D0C9122AC5334002ADAEF /* Standings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Standings.swift; sourceTree = "<group>"; };
+		DA445E5922B862CE00F9498E /* PlayerStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsViewController.swift; sourceTree = "<group>"; };
+		DA445E5B22B8653400F9498E /* PlayerStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStats.swift; sourceTree = "<group>"; };
+		DA445E5D22B866D700F9498E /* PlayerStatsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatsAPI.swift; sourceTree = "<group>"; };
 		DA4743D422A5CAD700F36A85 /* LeaguesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesViewController.swift; sourceTree = "<group>"; };
 		DA4743D622A5CC3E00F36A85 /* LeaguesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesTableViewCell.swift; sourceTree = "<group>"; };
 		DA4743D822A5D93600F36A85 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		DA6C151822A9CC88002FE132 /* StandingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StandingsViewController.storyboard; sourceTree = "<group>"; };
 		DA8697DC22A1DD8000176317 /* TeamsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA8697E322A1F9DE00176317 /* TeamsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsAPI.swift; sourceTree = "<group>"; };
+		DAAF2FF622B5D7FB008C636A /* PlayerStats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PlayerStats.storyboard; sourceTree = "<group>"; };
 		DAB09B4722B3352B003ECC61 /* PlayersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersAPI.swift; sourceTree = "<group>"; };
 		DAB0C68622A0E7A500A3AF8D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		DAB0C68922A0E9E900A3AF8D /* UISearchBarApperance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarApperance.swift; sourceTree = "<group>"; };
@@ -105,6 +113,7 @@
 				DA8697E322A1F9DE00176317 /* TeamsAPI.swift */,
 				DA1D0C8F22AC5251002ADAEF /* StandingsAPI.swift */,
 				DAB09B4722B3352B003ECC61 /* PlayersAPI.swift */,
+				DA445E5D22B866D700F9498E /* PlayerStatsAPI.swift */,
 			);
 			path = API_CALLS;
 			sourceTree = "<group>";
@@ -116,6 +125,7 @@
 				DAE0B11922A729370021D835 /* Teams.swift */,
 				DA1D0C9122AC5334002ADAEF /* Standings.swift */,
 				DA63363222B331F700E5737F /* Players.swift */,
+				DA445E5B22B8653400F9498E /* PlayerStats.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +148,7 @@
 				DAD6D89822A5A114005F3136 /* TeamsCollectionVC.swift */,
 				DA6C151622A9C415002FE132 /* StandingsViewController.swift */,
 				DA63362E22B31AB300E5737F /* PlayersViewController.swift */,
+				DA445E5922B862CE00F9498E /* PlayerStatsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 				DACFD42922A0DF4800F9489D /* Assets.xcassets */,
 				DACFD42B22A0DF4800F9489D /* LaunchScreen.storyboard */,
 				DACFD42E22A0DF4800F9489D /* Info.plist */,
+				DAAF2FF622B5D7FB008C636A /* PlayerStats.storyboard */,
 			);
 			path = "Futbol Source";
 			sourceTree = "<group>";
@@ -279,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAF2FF722B5D7FB008C636A /* PlayerStats.storyboard in Resources */,
 				DACFD42D22A0DF4800F9489D /* LaunchScreen.storyboard in Resources */,
 				DACFD42A22A0DF4800F9489D /* Assets.xcassets in Resources */,
 				DA63362D22B3135800E5737F /* PlayersViewController.storyboard in Resources */,
@@ -347,12 +360,15 @@
 				DAB0C69122A106CE00A3AF8D /* DataSet.swift in Sources */,
 				DAD6D89922A5A114005F3136 /* TeamsCollectionVC.swift in Sources */,
 				DA63362F22B31AB300E5737F /* PlayersViewController.swift in Sources */,
+				DA445E5E22B866D700F9498E /* PlayerStatsAPI.swift in Sources */,
 				DA4743D722A5CC3E00F36A85 /* LeaguesTableViewCell.swift in Sources */,
 				DAC753BB22A993B700F0A3D7 /* UISegementControl.swift in Sources */,
 				DA4743D522A5CAD700F36A85 /* LeaguesViewController.swift in Sources */,
 				DAE0B11E22A7486F0021D835 /* LeaguesAPI.swift in Sources */,
+				DA445E5C22B8653400F9498E /* PlayerStats.swift in Sources */,
 				DACFD42322A0DF4700F9489D /* AppDelegate.swift in Sources */,
 				DA63363122B3316300E5737F /* PlayersTableViewCell.swift in Sources */,
+				DA445E5A22B862CE00F9498E /* PlayerStatsViewController.swift in Sources */,
 				DA1D0C9222AC5334002ADAEF /* Standings.swift in Sources */,
 				DA1D0C8E22AC509E002ADAEF /* StandingsTableViewCell.swift in Sources */,
 				DA4743D922A5D93600F36A85 /* UIViewExtensions.swift in Sources */,
