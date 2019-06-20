@@ -147,11 +147,20 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="yS5-S3-MqS" id="iUm-0U-mSZ"/>
+                        <segue destination="jlO-eN-wGD" kind="show" identifier="goToPlayerStats" id="KG3-Ln-SSJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DnO-gY-D4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869.5652173913045" y="13.392857142857142"/>
+        </scene>
+        <!--PlayerStats-->
+        <scene sceneID="kvw-iH-ng9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PlayerStats" id="jlO-eN-wGD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A8m-Zp-YBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2855" y="13"/>
         </scene>
     </scenes>
 </document>

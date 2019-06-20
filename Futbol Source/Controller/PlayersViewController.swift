@@ -18,6 +18,8 @@ class PlayersViewController: UIViewController {
     
     let playerAPI = PlayersAPI()
     
+    let playerStatsAPI = PlayerStatsAPI()
+    
     var teamId: Int?
     
     override func viewDidLoad() {
@@ -27,10 +29,10 @@ class PlayersViewController: UIViewController {
         tableView.layer.backgroundColor = #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)
         //navigationItem.title = "Players";
         
-       print("Inside TeamId: ", teamId ?? "No value for team ID")
+       //print("Inside TeamId: ", teamId ?? "No value for team ID")
         
         if let teamID = teamId {
-            print("I am inside the PlayersVC: ", teamID)
+            //print("I am inside the PlayersVC: ", teamID)
             getPlayers(teamID: teamID)
         }
         
@@ -50,17 +52,26 @@ class PlayersViewController: UIViewController {
                 
                 if let players = players {
                     players.forEach({ (player) in
-                        print("Player ID: ", player.playerID)
-                        print("Player Name: ", player.playerName)
-                        print("Player Position: ", player.playerPosition)
-                        print("Player Age: ", player.playerAge)
+//                        print("Player ID: ", player.playerID)
+//                        print("Player Name: ", player.playerName)
+//                        print("Player Position: ", player.playerPosition)
+//                        print("Player Age: ", player.playerAge)
                     })
                 }
             }
         }
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToPlayerStats" {
+            if let playerDestination = segue.destination as? PlayerStatsViewController {
+                if let index = tableView.indexPathForSelectedRow {
+                    let player = playerStatsAPI.playerStats[index.row]
+                    playerDestination.playerID = player.player_id
+                }
+            }
+        }
+    }
 
 }
 
@@ -77,5 +88,9 @@ extension PlayersViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToPlayerStats", sender: self)
+    }
     
 }

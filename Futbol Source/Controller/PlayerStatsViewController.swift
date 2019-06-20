@@ -22,9 +22,25 @@ class PlayerStatsViewController: UIViewController {
     @IBOutlet weak var concededGoalsLabel: UILabel!
     
     
+    let playerStatsAPI = PlayerStatsAPI()
+    
+    var playerID: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Inside Player Stats: ", playerID ?? "None")
+        
+    }
+    
+    
+    func getPlayerStats(playerID: Int) {
+        self.showSpinner()
+        playerStatsAPI.getPlayerStatsAlamoFire(id: playerID, completion: { (playerStat) in
+            if self.playerStatsAPI.playerStats.count > 0 {
+                self.removeSpinner()
+            }
+        })
     }
     
 

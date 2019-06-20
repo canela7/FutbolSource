@@ -24,7 +24,7 @@ class PlayersAPI {
             return
         }
         
-        print("URL: ",  url)
+      //  print("URL: ",  url)
         
         let parameters: Parameters = ["id": id.description]
         
@@ -61,10 +61,10 @@ class PlayersAPI {
         
         for player in json["api"]["players"].arrayValue {
            
-            print(player["player_id"].intValue)
-            print(player["player_name"].stringValue)
-            print(player["position"].stringValue)
-            print(player["age"].intValue)
+//            print(player["player_id"].intValue)
+//            print(player["player_name"].stringValue)
+//            print(player["position"].stringValue)
+//            print(player["age"].intValue)
             
             let playerID = player["player_id"].intValue
             let playerName = player["player_name"].stringValue
