@@ -31,6 +31,10 @@ class PlayerStatsViewController: UIViewController {
         
         print("Inside Player Stats: ", playerID ?? "None")
         
+        if let player_id = playerID {
+            getPlayerStats(playerID: player_id)
+        }
+        
     }
     
     
@@ -38,6 +42,9 @@ class PlayerStatsViewController: UIViewController {
         self.showSpinner()
         playerStatsAPI.getPlayerStatsAlamoFire(id: playerID, completion: { (playerStat) in
             if self.playerStatsAPI.playerStats.count > 0 {
+                
+                
+                
                 self.removeSpinner()
             }
         })

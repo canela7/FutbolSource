@@ -84,8 +84,24 @@ class PlayerStatsAPI {
             print("Player rating:", player[0]["rating"].intValue)
   
             
-        
+            let playerId = player[0]["player_id"].intValue
+            let playerName = player[0]["player_name"].stringValue
+            let playerApp = player[0]["games"]["appearences"].intValue
+            let playerMinutes = player[0]["games"]["minutes_played"].intValue
+            let playerDribbleAttempts = player[0]["dribbles"]["attempts"].intValue
+            let playerDribbleSuccess = player[0]["dribbles"]["success"].intValue
+            let playerPassesAccuracy = player[0]["passes"]["accuracy"].intValue
+            let playerTotalTackles  = player[0]["tackles"]["total"].intValue
+            let playerTotalGoals = player[0]["goals"]["total"].intValue
+            let playerAssists = player[0]["goals"]["assists"].intValue
+            let playerRedCards =  player[0]["cards"]["red"].intValue
+            let playerYellowCards = player[0]["cards"]["yellow"].intValue
+            let playerGoalConceded = player[0]["goals"]["conceded"].intValue
+            let playerRating = player[0]["rating"].intValue
             
+            let playerStatistics = PlayerStats(player_id: playerId, player_name: playerName, player_appearances: playerApp, player_minutes: playerMinutes, player_dribbles_attempts: playerDribbleAttempts, player_dribbles_success: playerDribbleSuccess, player_passes_accuracy: playerPassesAccuracy, player_tackles: playerTotalTackles, player_goals: playerTotalGoals, player_assists: playerAssists, player_red_cards: playerRedCards, player_yellow_cards: playerYellowCards, player_conceded_goals: playerGoalConceded, player_overall_rating: playerRating)
+            
+            playerStats.append(playerStatistics)
         }
         
         

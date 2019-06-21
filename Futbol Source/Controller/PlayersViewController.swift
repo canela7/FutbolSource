@@ -66,8 +66,8 @@ class PlayersViewController: UIViewController {
         if segue.identifier == "goToPlayerStats" {
             if let playerDestination = segue.destination as? PlayerStatsViewController {
                 if let index = tableView.indexPathForSelectedRow {
-                    let player = playerStatsAPI.playerStats[index.row]
-                    playerDestination.playerID = player.player_id
+                    let player = playerAPI.players[index.row]
+                    playerDestination.playerID = player.playerID
                 }
             }
         }
