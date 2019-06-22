@@ -60,44 +60,44 @@ class PlayerStatsAPI {
     
         for player in playerStatsArray {
             
-            print("PlayerID: ", player[0]["player_id"].intValue)
-            print("Player Name:", player[0]["player_name"].stringValue)
-            print("Player Appearences:", player[0]["games"]["appearences"].intValue)
-            print("Player Minutes Played:", player[0]["games"]["minutes_played"].intValue)
+            print("PlayerID: ", player["player_id"].intValue)
+            print("Player Name:", player["player_name"].stringValue)
+            print("Player Appearences:", player["games"]["appearences"].intValue)
+            print("Player Minutes Played:", player["games"]["minutes_played"].intValue)
             
-            print("Player Dribbles Attempts: ", player[0]["dribbles"]["attempts"].intValue)
-            print("Player Dribbles Success:", player[0]["dribbles"]["success"].intValue)
+            print("Player Dribbles Attempts: ", player["dribbles"]["attempts"].intValue)
+            print("Player Dribbles Success:", player["dribbles"]["success"].intValue)
             
-            print("Player Passes Accuracy:", player[0]["passes"]["accuracy"].intValue)
-            print("Player total Tackles: ", player[0]["tackles"]["total"].intValue)
+            print("Player Passes Accuracy:", player["passes"]["accuracy"].intValue)
+            print("Player total Tackles: ", player["tackles"]["total"].intValue)
             
-            print("Player total goals: ", player[0]["goals"]["total"].intValue)
+            print("Player total goals: ", player["goals"]["total"].intValue)
             
-            print("Player Assists: ", player[0]["goals"]["assists"].intValue)
+            print("Player Assists: ", player["goals"]["assists"].intValue)
             
-            print("Player red card: ", player[0]["cards"]["red"].intValue)
-            print("Player yellow card: ", player[0]["cards"]["yellow"].intValue)
+            print("Player red card: ", player["cards"]["red"].intValue)
+            print("Player yellow card: ", player["cards"]["yellow"].intValue)
             
             
-            print("Player goal conced:", player[0]["goals"]["conceded"].intValue)
+            print("Player goal conced:", player["goals"]["conceded"].intValue)
             
-            print("Player rating:", player[0]["rating"].intValue)
+            print("Player rating:", player["rating"].intValue)
   
             
-            let playerId = player[0]["player_id"].intValue
-            let playerName = player[0]["player_name"].stringValue
-            let playerApp = player[0]["games"]["appearences"].intValue
-            let playerMinutes = player[0]["games"]["minutes_played"].intValue
-            let playerDribbleAttempts = player[0]["dribbles"]["attempts"].intValue
-            let playerDribbleSuccess = player[0]["dribbles"]["success"].intValue
-            let playerPassesAccuracy = player[0]["passes"]["accuracy"].intValue
-            let playerTotalTackles  = player[0]["tackles"]["total"].intValue
-            let playerTotalGoals = player[0]["goals"]["total"].intValue
-            let playerAssists = player[0]["goals"]["assists"].intValue
-            let playerRedCards =  player[0]["cards"]["red"].intValue
-            let playerYellowCards = player[0]["cards"]["yellow"].intValue
-            let playerGoalConceded = player[0]["goals"]["conceded"].intValue
-            let playerRating = player[0]["rating"].intValue
+            let playerId = player["player_id"].intValue
+            let playerName = player["player_name"].stringValue
+            let playerApp = player["games"]["appearences"].intValue
+            let playerMinutes = player["games"]["minutes_played"].intValue
+            let playerDribbleAttempts = player["dribbles"]["attempts"].intValue
+            let playerDribbleSuccess = player["dribbles"]["success"].intValue
+            let playerPassesAccuracy = player["passes"]["accuracy"].intValue
+            let playerTotalTackles  = player["tackles"]["total"].intValue
+            let playerTotalGoals = player["goals"]["total"].intValue
+            let playerAssists = player["goals"]["assists"].intValue
+            let playerRedCards =  player["cards"]["red"].intValue
+            let playerYellowCards = player["cards"]["yellow"].intValue
+            let playerGoalConceded = player["goals"]["conceded"].intValue
+            let playerRating = player["rating"].intValue
             
             let playerStatistics = PlayerStats(player_id: playerId, player_name: playerName, player_appearances: playerApp, player_minutes: playerMinutes, player_dribbles_attempts: playerDribbleAttempts, player_dribbles_success: playerDribbleSuccess, player_passes_accuracy: playerPassesAccuracy, player_tackles: playerTotalTackles, player_goals: playerTotalGoals, player_assists: playerAssists, player_red_cards: playerRedCards, player_yellow_cards: playerYellowCards, player_conceded_goals: playerGoalConceded, player_overall_rating: playerRating)
             

@@ -241,17 +241,17 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="LJl-O4-GEQ">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LJl-O4-GEQ">
                                                 <rect key="frame" x="35" y="377.5" width="304" height="24"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall Rating:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggb-cA-cYZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="127" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="137" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8p-M5-7st">
-                                                        <rect key="frame" x="177" y="0.0" width="127" height="24"/>
+                                                        <rect key="frame" x="167" y="0.0" width="137" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -303,6 +303,8 @@
                         <outlet property="goalsLabel" destination="t3W-aQ-Kf6" id="351-Nh-lt0"/>
                         <outlet property="minutesLabel" destination="0dc-cI-6ui" id="B1v-uf-0MX"/>
                         <outlet property="playerNameLabel" destination="Z4f-sB-2zF" id="jP8-bM-v0f"/>
+                        <outlet property="playerRatingLabel" destination="X8p-M5-7st" id="kXY-t0-XBU"/>
+                        <outlet property="playerStatsCardView" destination="8ax-YP-GWM" id="cH4-Oh-EqB"/>
                         <outlet property="redCardLabel" destination="WI1-ad-gjd" id="GoJ-qx-UlU"/>
                         <outlet property="tacklesLabel" destination="MZQ-sR-yf0" id="dt0-0n-ScO"/>
                         <outlet property="yellowCardLabel" destination="W9I-tM-ZI0" id="IGb-8y-Q5F"/>
